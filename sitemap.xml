@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://shenenya.com/2017/09/13/hello/</loc>
+    <loc>http://shenenya.com/categories/index.html</loc>
     
-    <lastmod>2017-09-14T00:37:45.516Z</lastmod>
+    <lastmod>2017-09-14T00:42:08.212Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://shenenya.com/categories/index.html</loc>
+    <loc>http://shenenya.com/2017/09/13/welcome/</loc>
     
-    <lastmod>2017-09-14T00:33:43.028Z</lastmod>
+    <lastmod>2017-09-14T00:40:53.412Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://shenenya.com/about/index.html</loc>
+    
+    <lastmod>2017-09-14T00:40:19.180Z</lastmod>
     
   </url>
   
@@ -19,13 +26,6 @@
     <loc>http://shenenya.com/tags/index.html</loc>
     
     <lastmod>2017-09-14T00:33:25.264Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://shenenya.com/about/index.html</loc>
-    
-    <lastmod>2017-09-14T00:32:58.876Z</lastmod>
     
   </url>
   
