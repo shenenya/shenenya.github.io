@@ -526,10 +526,10 @@ window.SITE_DATA = {
 
   contact: {
     email: "shenenya@tsinghua.edu.cn",
-    phone: "010-62773900 / 62773279",
-    address: {
-      zh: "北京市海淀区 清华大学 自强科技楼 2 号楼 1411 室",
-      en: "Room 1411, Building 2, Ziqiang Sci-Tech Building, Tsinghua University, Haidian District, Beijing",
-    },
+    // phone: "010-62773900 / 62773279",
+    // address: {
+    //   zh: "北京市海淀区 清华大学 主楼东配楼",
+    //   en: "Main Building, Tsinghua University, Haidian District, Beijing",
+    // },
   },
 };

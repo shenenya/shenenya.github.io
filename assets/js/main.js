@@ -2,7 +2,7 @@
   const D = window.SITE_DATA;
   const I18N = {
     zh: {
-      "brand": "沈恩亚",
+      brand: "沈恩亚",
       "nav.about": "简介",
       "nav.news": "动态",
       "nav.research": "研究",
@@ -34,10 +34,10 @@
       "contact.address": "地址",
       "stats.pv": "浏览量",
       "stats.uv": "访客",
-      "footer.link": "清华大学软件学院"
+      "footer.link": "清华大学软件学院",
     },
     en: {
-      "brand": "Enya Shen",
+      brand: "Enya Shen",
       "nav.about": "About",
       "nav.news": "News",
       "nav.research": "Research",
@@ -69,22 +69,38 @@
       "contact.address": "Address",
       "stats.pv": "Views",
       "stats.uv": "Visitors",
-      "footer.link": "School of Software, Tsinghua University"
-    }
+      "footer.link": "School of Software, Tsinghua University",
+    },
   };
 
   let lang = localStorage.getItem("lang") || "zh";
 
-  function t(key) { return I18N[lang][key] || key; }
-  function pick(obj) { return obj && typeof obj === "object" && "zh" in obj ? obj[lang] : obj; }
-  function esc(s) { return String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c])); }
+  function t(key) {
+    return I18N[lang][key] || key;
+  }
+  function pick(obj) {
+    return obj && typeof obj === "object" && "zh" in obj ? obj[lang] : obj;
+  }
+  function esc(s) {
+    return String(s).replace(
+      /[&<>"']/g,
+      (c) =>
+        ({
+          "&": "&amp;",
+          "<": "&lt;",
+          ">": "&gt;",
+          '"': "&quot;",
+          "'": "&#39;",
+        })[c],
+    );
+  }
 
   function renderStatic() {
     document.documentElement.lang = lang === "zh" ? "zh" : "en";
-    document.querySelectorAll("[data-i18n]").forEach(el => {
+    document.querySelectorAll("[data-i18n]").forEach((el) => {
       el.textContent = t(el.dataset.i18n);
     });
-    document.querySelectorAll(".lang-toggle button").forEach(b => {
+    document.querySelectorAll(".lang-toggle button").forEach((b) => {
       b.classList.toggle("active", b.dataset.lang === lang);
     });
   }
@@ -96,12 +112,20 @@
     document.getElementById("affiliation").textContent = pick(p.affiliation);
     document.getElementById("bio").innerHTML = pick(p.bio);
     const tags = document.getElementById("area-tags");
-    tags.innerHTML = pick(p.areas).map(a => `<span class="tag">${esc(a)}</span>`).join("");
+    tags.innerHTML = pick(p.areas)
+      .map((a) => `<span class="tag">${esc(a)}</span>`)
+      .join("");
   }
 
   function renderAbout() {
     const e = D.experience;
-    const toItems = arr => arr.map(x => `<li><span class="period">${esc(x.period)}</span><span>${esc(x.text)}</span></li>`).join("");
+    const toItems = (arr) =>
+      arr
+        .map(
+          (x) =>
+            `<li><span class="period">${esc(x.period)}</span><span>${esc(x.text)}</span></li>`,
+        )
+        .join("");
     document.getElementById("work-list").innerHTML = toItems(pick(e.work));
     document.getElementById("edu-list").innerHTML = toItems(pick(e.education));
   }
@@ -109,30 +133,42 @@
   function renderNews() {
     const r = D.recruiting;
     document.getElementById("recruit-year").textContent = r.year;
-    document.getElementById("recruit-list").innerHTML = pick(r.items).map(s => `<li>${s}</li>`).join("");
+    document.getElementById("recruit-list").innerHTML = pick(r.items)
+      .map((s) => `<li>${s}</li>`)
+      .join("");
     document.getElementById("recruit-cta").textContent = pick(r.cta);
   }
 
   function renderResearch() {
     const grid = document.getElementById("research-grid");
-    grid.innerHTML = D.research.areas.map(a => `
+    grid.innerHTML = D.research.areas
+      .map(
+        (a) => `
       <div class="research-card">
         <h3>${esc(pick(a.title))}</h3>
         <p>${esc(pick(a.desc))}</p>
       </div>
-    `).join("");
+    `,
+      )
+      .join("");
   }
 
   function renderPublications() {
     const list = document.getElementById("pub-list");
     const placeholder = lang === "zh" ? "摘要待补充…" : "Abstract to be added…";
-    list.innerHTML = D.publications.map(p => {
-      const teaser = p.teaser
-        ? `<img src="${esc(p.teaser)}" alt="">`
-        : `<span>teaser</span>`;
-      const links = (p.links || []).map(l => `<a href="${esc(l.href)}" target="_blank" rel="noopener">${esc(l.label)}</a>`).join("");
-      const abs = pick(p.abstract) || "";
-      return `
+    list.innerHTML = D.publications
+      .map((p) => {
+        const teaser = p.teaser
+          ? `<img src="${esc(p.teaser)}" alt="">`
+          : `<span>teaser</span>`;
+        const links = (p.links || [])
+          .map(
+            (l) =>
+              `<a href="${esc(l.href)}" target="_blank" rel="noopener">${esc(l.label)}</a>`,
+          )
+          .join("");
+        const abs = pick(p.abstract) || "";
+        return `
         <li>
           <div class="pub-teaser">${teaser}</div>
           <div class="pub-body">
@@ -143,49 +179,70 @@
             <div class="pub-abstract" data-placeholder="${esc(placeholder)}">${esc(abs)}</div>
           </div>
         </li>`;
-    }).join("");
+      })
+      .join("");
 
-    document.getElementById("books-list").innerHTML =
-      D.books.map(b => `<li>${esc(pick(b))}</li>`).join("");
+    document.getElementById("books-list").innerHTML = D.books
+      .map((b) => `<li>${esc(pick(b))}</li>`)
+      .join("");
   }
 
   function renderProjects() {
-    document.getElementById("projects-list").innerHTML = D.projects.map(p =>
-      `<li><span>${esc(pick({zh: p.zh, en: p.en}))}</span><span class="period">${esc(p.period)}</span></li>`
-    ).join("");
+    document.getElementById("projects-list").innerHTML = D.projects
+      .map(
+        (p) =>
+          `<li><span>${esc(pick({ zh: p.zh, en: p.en }))}</span><span class="period">${esc(p.period)}</span></li>`,
+      )
+      .join("");
   }
 
   function renderPatents() {
-    document.getElementById("patents-list").innerHTML = D.patents.map(p => `
+    document.getElementById("patents-list").innerHTML = D.patents
+      .map(
+        (p) => `
       <li>
         <div class="patent-title">${esc(p.title)}</div>
         <div class="patent-meta">${esc(p.authors)} · ${esc(p.id)} · ${esc(p.date)}</div>
       </li>
-    `).join("");
+    `,
+      )
+      .join("");
   }
 
   function renderStudentGroup(group) {
-    return Object.values(group).map(g => {
-      const rows = g.items.map(it =>
-        `<li><span class="year">${esc(it.year)}</span><span>${esc(it.names)}</span></li>`
-      ).join("");
-      return `
+    return Object.values(group)
+      .map((g) => {
+        const rows = g.items
+          .map(
+            (it) =>
+              `<li><span class="year">${esc(it.year)}</span><span>${esc(it.names)}</span></li>`,
+          )
+          .join("");
+        return `
         <div class="student-group">
           <h4>${esc(pick(g.label))}</h4>
           <ul>${rows}</ul>
         </div>`;
-    }).join("");
+      })
+      .join("");
   }
 
   function renderStudents() {
-    document.getElementById("students-current").innerHTML = renderStudentGroup(D.students.current);
-    document.getElementById("students-alumni").innerHTML = renderStudentGroup(D.students.alumni);
-    document.getElementById("honors-list").innerHTML = D.honors.map(h => `<li>${esc(pick(h))}</li>`).join("");
+    document.getElementById("students-current").innerHTML = renderStudentGroup(
+      D.students.current,
+    );
+    document.getElementById("students-alumni").innerHTML = renderStudentGroup(
+      D.students.alumni,
+    );
+    document.getElementById("honors-list").innerHTML = D.honors
+      .map((h) => `<li>${esc(pick(h))}</li>`)
+      .join("");
   }
 
   function renderService() {
-    document.getElementById("service-list").innerHTML =
-      pick(D.service).map(s => `<li>${esc(s)}</li>`).join("");
+    document.getElementById("service-list").innerHTML = pick(D.service)
+      .map((s) => `<li>${esc(s)}</li>`)
+      .join("");
   }
 
   function renderContact() {
@@ -208,11 +265,14 @@
     renderStudents();
     renderService();
     renderContact();
-    document.title = (lang === "zh" ? "沈恩亚" : "Enya Shen") + " · " + (lang === "zh" ? "清华大学软件学院" : "Tsinghua University");
+    document.title =
+      (lang === "zh" ? "沈恩亚" : "Enya Shen") +
+      " · " +
+      (lang === "zh" ? "清华大学软件学院" : "Tsinghua University");
   }
 
   function setupLangToggle() {
-    document.querySelectorAll(".lang-toggle button").forEach(btn => {
+    document.querySelectorAll(".lang-toggle button").forEach((btn) => {
       btn.addEventListener("click", () => {
         lang = btn.dataset.lang;
         localStorage.setItem("lang", lang);
@@ -224,25 +284,31 @@
   function setupScrollSpy() {
     const links = document.querySelectorAll(".nav a");
     const sections = Array.from(links)
-      .map(a => document.querySelector(a.getAttribute("href")))
+      .map((a) => document.querySelector(a.getAttribute("href")))
       .filter(Boolean);
     if (!("IntersectionObserver" in window) || !sections.length) return;
-    const io = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          const id = "#" + e.target.id;
-          links.forEach(a => a.classList.toggle("active", a.getAttribute("href") === id));
-        }
-      });
-    }, { rootMargin: "-40% 0px -55% 0px", threshold: 0 });
-    sections.forEach(s => io.observe(s));
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            const id = "#" + e.target.id;
+            links.forEach((a) =>
+              a.classList.toggle("active", a.getAttribute("href") === id),
+            );
+          }
+        });
+      },
+      { rootMargin: "-40% 0px -55% 0px", threshold: 0 },
+    );
+    sections.forEach((s) => io.observe(s));
   }
 
   function setupThemeToggle() {
     const btn = document.getElementById("theme-toggle");
     if (!btn) return;
     btn.addEventListener("click", () => {
-      const current = document.documentElement.getAttribute("data-theme") || "light";
+      const current =
+        document.documentElement.getAttribute("data-theme") || "light";
       const next = current === "light" ? "dark" : "light";
       document.documentElement.setAttribute("data-theme", next);
       localStorage.setItem("theme", next);
@@ -254,14 +320,14 @@
 
     const map = L.map("visitor-map").setView([20, 0], 1);
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      attribution: '© OpenStreetMap',
+      attribution: "© OpenStreetMap",
       maxZoom: 18,
-      minZoom: 1
+      minZoom: 1,
     }).addTo(map);
 
     fetch("https://ipapi.co/json/")
-      .then(res => res.json())
-      .then(data => {
+      .then((res) => res.json())
+      .then((data) => {
         if (data.latitude && data.longitude) {
           const loc = [data.city, data.country_name].filter(Boolean).join(", ");
           L.marker([data.latitude, data.longitude])
