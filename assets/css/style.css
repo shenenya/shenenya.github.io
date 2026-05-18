@@ -225,12 +225,6 @@ section:first-of-type { margin-top: 0; }
   font-size: 0.9rem;
   line-height: 1.58;
 }
-.pub-abstract span {
-  display: inline-block;
-  margin-right: 0.5rem;
-  color: var(--accent);
-  font-weight: 600;
-}
 /* ===== Plain lists ===== */
 .plain { list-style: none; padding: 0; margin: 0; }
 .plain li {

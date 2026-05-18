@@ -27,7 +27,6 @@
       "sec.honors": "学生荣誉",
       "sec.service": "服务",
       "sec.contact": "联系",
-      "pub.abstract": "摘要",
       "contact.email": "邮箱",
       "contact.phone": "电话",
       "contact.address": "地址",
@@ -59,7 +58,6 @@
       "sec.honors": "Student Honors",
       "sec.service": "Service",
       "sec.contact": "Contact",
-      "pub.abstract": "Abstract",
       "contact.email": "Email",
       "contact.phone": "Phone",
       "contact.address": "Address",
@@ -186,7 +184,7 @@
             ${links ? `<div class="pub-links">${links}</div>` : ""}
             ${
               abstract
-                ? `<div class="pub-abstract"><span>${esc(t("pub.abstract"))}</span>${esc(abstract)}</div>`
+                ? `<div class="pub-abstract">${esc(abstract)}</div>`
                 : ""
             }
           </div>

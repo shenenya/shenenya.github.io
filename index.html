@@ -9,8 +9,7 @@
 <script>
   (function () {
     var saved = localStorage.getItem("theme");
-    var prefers = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-    var theme = saved === "light" || saved === "dark" ? saved : prefers ? "dark" : "light";
+    var theme = saved === "light" || saved === "dark" ? saved : "dark";
     document.documentElement.setAttribute("data-theme", theme);
   })();
 </script>
@@ -139,7 +138,7 @@
 </footer>
 
 <script src="assets/js/data.js?v=20260518-3"></script>
-<script src="assets/js/main.js?v=20260518-5"></script>
+<script src="assets/js/main.js?v=20260518-6"></script>
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 </body>
 </html>
