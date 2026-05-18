@@ -308,35 +308,6 @@ section:first-of-type { margin-top: 0; }
 .contact li .label { color: var(--muted); }
 .contact li .label::after { content: "："; }
 
-/* ===== Stats ===== */
-.stats-container {
-  display: flex; gap: 1.5rem; align-items: center;
-  padding: 1.25rem;
-  border: 1px solid var(--border); border-radius: var(--radius);
-  background: var(--bg-alt);
-}
-.visitor-map-compact {
-  width: 280px; height: 160px;
-  border: 1px solid var(--border); border-radius: var(--radius);
-  background: var(--bg);
-  flex-shrink: 0;
-}
-.stats-info {
-  display: flex; flex-direction: column; gap: 0.75rem;
-  flex: 1;
-}
-.stat-item {
-  display: flex; justify-content: space-between; align-items: center;
-  padding: 0.5rem 0;
-}
-.stat-item .stat-label {
-  font-size: 0.9rem; color: var(--muted);
-}
-.stat-item .stat-value {
-  font-size: 1.4rem; font-weight: 600;
-  color: var(--accent); font-variant-numeric: tabular-nums;
-}
-
 /* ===== Footer ===== */
 footer {
   border-top: 1px solid var(--border);
@@ -368,8 +339,5 @@ footer {
   .proj-list .period { text-align: left; }
   .timeline li { grid-template-columns: 110px 1fr; }
   .contact li { grid-template-columns: 70px 1fr; }
-  .stats-container { flex-direction: column; }
-  .visitor-map-compact { width: 100%; height: 200px; }
 }
-
 

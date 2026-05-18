@@ -11,7 +11,6 @@
       "nav.students": "团队",
       "nav.service": "服务",
       "nav.contact": "联系",
-      "nav.stats": "统计",
       "sec.about": "经历",
       "sec.work": "工作履历",
       "sec.education": "教育背景",
@@ -28,12 +27,9 @@
       "sec.honors": "学生荣誉",
       "sec.service": "服务",
       "sec.contact": "联系",
-      "sec.stats": "访问统计",
       "contact.email": "邮箱",
       "contact.phone": "电话",
       "contact.address": "地址",
-      "stats.pv": "浏览量",
-      "stats.uv": "访客",
       "footer.link": "清华大学软件学院",
     },
     en: {
@@ -46,7 +42,6 @@
       "nav.students": "Team",
       "nav.service": "Service",
       "nav.contact": "Contact",
-      "nav.stats": "Stats",
       "sec.about": "Experience",
       "sec.work": "Work Experience",
       "sec.education": "Education",
@@ -63,20 +58,30 @@
       "sec.honors": "Student Honors",
       "sec.service": "Service",
       "sec.contact": "Contact",
-      "sec.stats": "Visitor Statistics",
       "contact.email": "Email",
       "contact.phone": "Phone",
       "contact.address": "Address",
-      "stats.pv": "Views",
-      "stats.uv": "Visitors",
       "footer.link": "School of Software, Tsinghua University",
     },
   };
 
-  let lang = localStorage.getItem("lang") || "zh";
+  const SUPPORTED_LANGS = ["zh", "en"];
+  const SUPPORTED_THEMES = ["light", "dark"];
+
+  function getStoredLang() {
+    const stored = localStorage.getItem("lang");
+    return SUPPORTED_LANGS.includes(stored) ? stored : "zh";
+  }
+
+  function getCurrentTheme() {
+    const current = document.documentElement.getAttribute("data-theme");
+    return SUPPORTED_THEMES.includes(current) ? current : "light";
+  }
+
+  let lang = getStoredLang();
 
   function t(key) {
-    return I18N[lang][key] || key;
+    return (I18N[lang] && I18N[lang][key]) || key;
   }
   function pick(obj) {
     return obj && typeof obj === "object" && "zh" in obj ? obj[lang] : obj;
@@ -103,6 +108,8 @@
     document.querySelectorAll(".lang-toggle button").forEach((b) => {
       b.classList.toggle("active", b.dataset.lang === lang);
     });
+    const themeToggle = document.getElementById("theme-toggle");
+    if (themeToggle) updateThemeToggle(themeToggle);
   }
 
   function renderHero() {
@@ -248,10 +255,15 @@
   function renderContact() {
     const c = D.contact;
     const email = document.getElementById("c-email");
-    email.textContent = c.email;
-    email.href = "mailto:" + c.email;
-    document.getElementById("c-phone").textContent = c.phone;
-    document.getElementById("c-address").textContent = pick(c.address);
+    const phone = document.getElementById("c-phone");
+    const address = document.getElementById("c-address");
+
+    if (email) {
+      email.textContent = c.email;
+      email.href = "mailto:" + c.email;
+    }
+    if (phone) phone.textContent = c.phone;
+    if (address) address.textContent = pick(c.address);
   }
 
   function renderAll() {
@@ -274,6 +286,7 @@
   function setupLangToggle() {
     document.querySelectorAll(".lang-toggle button").forEach((btn) => {
       btn.addEventListener("click", () => {
+        if (!SUPPORTED_LANGS.includes(btn.dataset.lang)) return;
         lang = btn.dataset.lang;
         localStorage.setItem("lang", lang);
         renderAll();
@@ -306,44 +319,27 @@
   function setupThemeToggle() {
     const btn = document.getElementById("theme-toggle");
     if (!btn) return;
+    updateThemeToggle(btn);
     btn.addEventListener("click", () => {
-      const current =
-        document.documentElement.getAttribute("data-theme") || "light";
+      const current = getCurrentTheme();
       const next = current === "light" ? "dark" : "light";
       document.documentElement.setAttribute("data-theme", next);
       localStorage.setItem("theme", next);
+      updateThemeToggle(btn);
     });
   }
 
-  function initVisitorStats() {
-    if (typeof L === "undefined") return;
-
-    const map = L.map("visitor-map").setView([20, 0], 1);
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      attribution: "© OpenStreetMap",
-      maxZoom: 18,
-      minZoom: 1,
-    }).addTo(map);
-
-    fetch("https://ipapi.co/json/")
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.latitude && data.longitude) {
-          const loc = [data.city, data.country_name].filter(Boolean).join(", ");
-          L.marker([data.latitude, data.longitude])
-            .addTo(map)
-            .bindPopup(loc || "Your location");
-          map.setView([data.latitude, data.longitude], 4);
-        }
-      })
-      .catch(() => {});
+  function updateThemeToggle(btn) {
+    const isDark = getCurrentTheme() === "dark";
+    btn.setAttribute("aria-pressed", String(isDark));
+    btn.setAttribute("aria-label", lang === "zh" ? "切换主题" : "Toggle theme");
+    btn.title = lang === "zh" ? "切换主题" : "Toggle theme";
   }
 
   document.addEventListener("DOMContentLoaded", () => {
-    renderAll();
     setupLangToggle();
-    setupScrollSpy();
     setupThemeToggle();
-    initVisitorStats();
+    renderAll();
+    setupScrollSpy();
   });
 })();
