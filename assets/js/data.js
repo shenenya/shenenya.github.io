@@ -161,7 +161,7 @@ window.SITE_DATA = {
   publications: [
     {
       authors: "Sili Liang, Anchang Bao, <b>Enya Shen*</b>, Jianmin Wang",
-      title: "A survey of Boolean operations in 3D geometric modeling",
+      title: "A Survey of Boolean operations in 3D geometric modeling",
       venue: "Computer-Aided Design 197, 2026: 104081",
       abstract: {
         zh: "系统综述三维几何建模中的布尔运算方法，将典型算法归纳为求交、分割、片段分类和拓扑重建等核心流程，并讨论 CSG、BSP、体素、隐式和混合表示等替代路线。文章重点分析鲁棒性、效率和可扩展性三类长期挑战，为构建稳定高效的现代几何建模系统提供参考。",
