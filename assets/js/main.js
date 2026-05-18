@@ -27,6 +27,7 @@
       "sec.honors": "学生荣誉",
       "sec.service": "服务",
       "sec.contact": "联系",
+      "pub.abstract": "摘要",
       "contact.email": "邮箱",
       "contact.phone": "电话",
       "contact.address": "地址",
@@ -58,6 +59,7 @@
       "sec.honors": "Student Honors",
       "sec.service": "Service",
       "sec.contact": "Contact",
+      "pub.abstract": "Abstract",
       "contact.email": "Email",
       "contact.phone": "Phone",
       "contact.address": "Address",
@@ -162,7 +164,6 @@
 
   function renderPublications() {
     const list = document.getElementById("pub-list");
-    const placeholder = lang === "zh" ? "摘要待补充…" : "Abstract to be added…";
     list.innerHTML = D.publications
       .map((p) => {
         const teaser = p.teaser
@@ -174,7 +175,7 @@
               `<a href="${esc(l.href)}" target="_blank" rel="noopener">${esc(l.label)}</a>`,
           )
           .join("");
-        const abs = pick(p.abstract) || "";
+        const abstract = pick(p.abstract);
         return `
         <li>
           <div class="pub-teaser">${teaser}</div>
@@ -183,7 +184,11 @@
             <div class="pub-authors">${p.authors}</div>
             <div class="pub-venue">${esc(p.venue)}</div>
             ${links ? `<div class="pub-links">${links}</div>` : ""}
-            <div class="pub-abstract" data-placeholder="${esc(placeholder)}">${esc(abs)}</div>
+            ${
+              abstract
+                ? `<div class="pub-abstract"><span>${esc(t("pub.abstract"))}</span>${esc(abstract)}</div>`
+                : ""
+            }
           </div>
         </li>`;
       })
