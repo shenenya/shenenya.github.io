@@ -141,7 +141,12 @@
     const r = D.recruiting;
     document.getElementById("recruit-year").textContent = r.year;
     document.getElementById("recruit-list").innerHTML = pick(r.items)
-      .map((s) => `<li>${s}</li>`)
+      .map((s) => {
+        const isSubitem =
+          /^\s+/.test(s) ||
+          /^<strong>(清华大学|南开大学|Tsinghua|Nankai)<\/strong>/.test(s);
+        return `<li${isSubitem ? ' class="recruit-subitem"' : ""}>${s.trim()}</li>`;
+      })
       .join("");
     document.getElementById("recruit-cta").textContent = pick(r.cta);
   }

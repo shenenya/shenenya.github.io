@@ -21,16 +21,20 @@ window.SITE_DATA = {
   },
 
   recruiting: {
-    year: 2026,
+    year: 2027,
     items: {
       zh: [
-        "<strong>研究生</strong>：对几何建模相关问题感兴趣，有良好的数学或编程基础，自我驱动。清华大学：博士生 1 名、硕士生 3 名；南开大学：博士生 2 名。",
         "<strong>博士后一名（清华大学）</strong>：三维几何建模引擎核心算法和技术。",
+        "<strong>研究生</strong>：对几何建模相关问题感兴趣，有良好的数学或编程基础，自我驱动。",
+        "<strong>清华大学</strong>：博士生 1 名、硕士生 3 名。",
+        "<strong>南开大学</strong>：博士生 2 名。",
         "<strong>实习生三名（清华大学）</strong>：欢迎参加暑期实践的优秀本科生。",
       ],
       en: [
-        "<strong>Graduate students</strong>: passionate about geometric modeling, with solid math or programming background and self-motivation. Tsinghua: 1 PhD and 3 Master positions; Nankai: 2 PhD positions.",
         "<strong>Postdoc (Tsinghua)</strong>: core algorithms and technologies for 3D geometric modeling engines.",
+        "<strong>Graduate students</strong>: passionate about geometric modeling, with solid math or programming background and self-motivation.",
+        "<strong>Tsinghua</strong>: 1 PhD and 3 Master positions.",
+        "<strong>Nankai</strong>: 2 PhD positions.",
         "<strong>Three interns (Tsinghua)</strong>: outstanding undergraduates for summer practice are welcome.",
       ],
     },
