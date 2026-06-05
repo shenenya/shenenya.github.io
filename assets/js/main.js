@@ -230,7 +230,7 @@
         const rows = g.items
           .map(
             (it) =>
-              `<li><span class="year">${esc(it.year)}</span><span>${esc(it.names)}</span></li>`,
+              `<li><span class="year">${esc(it.year)}</span><span>${esc(pick(it.names))}</span></li>`,
           )
           .join("");
         return `

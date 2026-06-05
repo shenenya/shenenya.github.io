@@ -598,29 +598,65 @@ window.SITE_DATA = {
     current: {
       postdoc: {
         label: { zh: "博士后", en: "Postdoc" },
-        items: [{ year: "2025", names: "陈鸿宇" }],
+        items: [{ year: "2025", names: { zh: "陈鸿宇", en: "Chen Hongyu" } }],
       },
       phd: {
         label: { zh: "博士生", en: "Ph.D. Students" },
         items: [
-          { year: "2023", names: "梁思立" },
-          { year: "2024", names: "鲍桉畅、李睿、赵徐艺" },
-          { year: "2025", names: "李朴达、张思皓" },
+          { year: "2023", names: { zh: "梁思立", en: "Liang Sili" } },
+          {
+            year: "2024",
+            names: {
+              zh: "鲍桉畅、李睿、赵徐艺",
+              en: "Bao Anchang, Li Rui, Zhao Xuyi",
+            },
+          },
+          {
+            year: "2025",
+            names: { zh: "李朴达、张思皓", en: "Li Puda, Zhang Sihao" },
+          },
         ],
       },
       master: {
         label: { zh: "硕士生", en: "Master Students" },
         items: [
-          { year: "2023", names: "张兴龙、尹晓龙、朱纪雄、时浩铭" },
-          { year: "2024", names: "邬政钢、杨袁瑞" },
-          { year: "2025", names: "卞一童、罗孟小、俞睿轩、谈诗语" },
+          {
+            year: "2023",
+            names: {
+              zh: "张兴龙、尹晓龙、朱纪雄、时浩铭",
+              en: "Zhang Xinglong, Yin Xiaolong, Zhu Jixiong, Shi Haoming",
+            },
+          },
+          {
+            year: "2024",
+            names: { zh: "邬政钢、杨袁瑞", en: "Wu Zhenggang, Yang Yuanrui" },
+          },
+          {
+            year: "2025",
+            names: {
+              zh: "卞一童、罗孟小、俞睿轩、谈诗语",
+              en: "Bian Yitong, Luo Mengxiao, Yu Ruixuan, Tan Shiyu",
+            },
+          },
         ],
       },
       engineer: {
         label: { zh: "工程师", en: "Engineers" },
         items: [
-          { year: "2024", names: "王康力、李冰、姚增辉、郑新琦、苗明辉、曹亮" },
-          { year: "2025", names: "郝自理、刘潇迪、刘宝星、柳佳淑" },
+          {
+            year: "2024",
+            names: {
+              zh: "王康力、李冰、姚增辉、郑新琦、苗明辉、曹亮",
+              en: "Wang Kangli, Li Bing, Yao Zenghui, Zheng Xinqi, Miao Minghui, Cao Liang",
+            },
+          },
+          {
+            year: "2025",
+            names: {
+              zh: "郝自理、刘潇迪、刘宝星、柳佳淑",
+              en: "Hao Zili, Liu Xiaodi, Liu Baoxing, Liu Jiashu",
+            },
+          },
         ],
       },
     },
@@ -628,28 +664,72 @@ window.SITE_DATA = {
       master: {
         label: { zh: "硕士生", en: "Master Alumni" },
         items: [
-          { year: "2023", names: "沈磊贤（香港科技大学）、太志伟（中望）" },
-          { year: "2024", names: "黄浩勉（纽约大学）、梁好（华为）" },
+          {
+            year: "2023",
+            names: {
+              zh: "沈磊贤（香港科技大学）、太志伟（中望）",
+              en: "Shen Leixian (HKUST), Tai Zhiwei (ZWSOFT)",
+            },
+          },
+          {
+            year: "2024",
+            names: {
+              zh: "黄浩勉（纽约大学）、梁好（华为）",
+              en: "Huang Haomian (New York University), Liang Hao (Huawei)",
+            },
+          },
         ],
       },
       undergrad: {
         label: { zh: "本科生", en: "Undergraduate Alumni" },
         items: [
-          { year: "2021", names: "曾子豪（清华大学）、孙梓健（清华大学）" },
-          { year: "2023", names: "邓超、李宏伟、马一波（清华大学）" },
-          { year: "2024", names: "赖宇航（清华大学）" },
+          {
+            year: "2021",
+            names: {
+              zh: "曾子豪（清华大学）、孙梓健（清华大学）",
+              en: "Zeng Zihao (Tsinghua University), Sun Zijian (Tsinghua University)",
+            },
+          },
+          {
+            year: "2023",
+            names: {
+              zh: "邓超、李宏伟、马一波（清华大学）",
+              en: "Deng Chao, Li Hongwei, Ma Yibo (Tsinghua University)",
+            },
+          },
+          {
+            year: "2024",
+            names: {
+              zh: "赖宇航（清华大学）",
+              en: "Lai Yuhang (Tsinghua University)",
+            },
+          },
           {
             year: "2025",
-            names:
-              "葛宏泽、韩昊欣（清华大学）、赵一衡（山东大学）、吴政翰（四川大学）",
+            names: {
+              zh: "葛宏泽、韩昊欣（清华大学）、赵一衡（山东大学）、吴政翰（四川大学）",
+              en: "Ge Hongze, Han Haoxin (Tsinghua University), Zhao Yiheng (Shandong University), Wu Zhenghan (Sichuan University)",
+            },
           },
         ],
       },
       intern: {
         label: { zh: "实习生", en: "Interns" },
         items: [
-          { year: "2019-2022", names: "岳魏琦（杭州电子科技大学）" },
-          { year: "2025", names: "许捷（电子科技大学）" },
+          {
+            year: "2019-2022",
+            names: {
+              zh: "岳魏琦（杭州电子科技大学）",
+              en: "Yue Weiqi (Hangzhou Dianzi University)",
+            },
+          },
+          {
+            year: "2025",
+            names: {
+              zh: "许捷（电子科技大学）",
+              en: "Xu Jie (University of Electronic Science and Technology of China)",
+            },
+          },
         ],
       },
     },
