@@ -755,6 +755,10 @@ window.SITE_DATA = {
 
   honors: [
     {
+      zh: "沈磊贤：清华大学综合优秀奖学金（二等）。2021 年。",
+      en: "Leixian Shen: Tsinghua Comprehensive Excellence Scholarship (2nd Prize), 2021.",
+    },
+    {
       zh: "郭镕玮、秦升荣、鲁睿、刘张毅、孙梓健、李睿：二次曲线曲面求交函数库。清华大学第四十届挑战杯二等奖。2022 年。",
       en: "Rongwei Guo, Shengrong Qin, Rui Lu, Zhangyi Liu, Zijian Sun, Rui Li: Quadric curve/surface intersection library. 40th Tsinghua Challenge Cup, 2nd Prize, 2022.",
     },
@@ -763,16 +767,16 @@ window.SITE_DATA = {
       en: "Rongwei Guo, Shengrong Qin: 40th Tsinghua Challenge Cup Best Newcomer Award, 2022.",
     },
     {
-      zh: "沈磊贤：清华大学综合优秀奖学金（二等）。2021 年。",
-      en: "Leixian Shen: Tsinghua Comprehensive Excellence Scholarship (2nd Prize), 2021.",
-    },
-    {
       zh: "沈磊贤：清华大学软件学院优秀毕业生。2023 年。",
       en: "Leixian Shen: Outstanding Graduate, School of Software, Tsinghua, 2023.",
     },
     {
       zh: "沈磊贤：中国图像图形学会首届优秀硕士论文。2024 年。",
       en: "Leixian Shen: CSIG Inaugural Outstanding Master's Thesis Award, 2024.",
+    },
+    {
+      zh: "张兴龙：清华大学软件学院优秀学位论文。2026 年。",
+      en: "Zhang Xinglong: Outstanding Degree Thesis, School of Software, Tsinghua University, 2026.",
     },
   ],
 
