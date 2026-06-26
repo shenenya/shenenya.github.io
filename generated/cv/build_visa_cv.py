@@ -373,23 +373,14 @@ def build_cv(lang, data):
         ],
     )
 
-    add_section(doc, "主要科研项目" if zh else "Selected Research Projects")
-    add_bullets(
+    add_section(doc, "代表性论文（前十篇）" if zh else "Selected Publications (Top 10)")
+    add_numbered(
         doc,
-        [
-            f"{proj['period']}: {pick({'zh': proj['zh'], 'en': proj['en']}, lang)}"
-            for proj in data["projects"]
-        ],
+        [publication_text(pub, lang) for pub in data["publications"][:10]],
     )
-
-    add_section(doc, "论文发表" if zh else "Publications")
-    add_numbered(doc, [publication_text(pub, lang) for pub in data["publications"]])
 
     add_section(doc, "专著" if zh else "Books")
     add_bullets(doc, [pick(book, lang) for book in data["books"]])
-
-    add_section(doc, "授权/公开专利" if zh else "Patents")
-    add_numbered(doc, [patent_text(pat, lang) for pat in data["patents"]])
 
     add_section(doc, "学生指导" if zh else "Student Mentoring")
     mentoring = []

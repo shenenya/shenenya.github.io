@@ -227,7 +227,8 @@
   function renderStudentGroup(group) {
     return Object.values(group)
       .map((g) => {
-        const rows = g.items
+        const rows = [...g.items]
+          .sort((a, b) => parseInt(b.year, 10) - parseInt(a.year, 10))
           .map(
             (it) =>
               `<li><span class="year">${esc(it.year)}</span><span>${esc(pick(it.names))}</span></li>`,

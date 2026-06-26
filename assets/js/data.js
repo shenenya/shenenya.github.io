@@ -164,336 +164,336 @@ window.SITE_DATA = {
 
   publications: [
     {
-      authors: "Sili Liang, Anchang Bao, <b>Enya Shen*</b>, Jianmin Wang",
-      title: "A Survey of Boolean operations in 3D geometric modeling",
-      venue: "Computer-Aided Design 197, 2026: 104081",
-      abstract: {
-        zh: "系统综述三维几何建模中的布尔运算方法，将典型算法归纳为求交、分割、片段分类和拓扑重建等核心流程，并讨论 CSG、BSP、体素、隐式和混合表示等替代路线。文章重点分析鲁棒性、效率和可扩展性三类长期挑战，为构建稳定高效的现代几何建模系统提供参考。",
-        en: "This survey reviews Boolean operations in 3D geometric modeling and organizes mainstream algorithms around intersection computation, splitting, fragment classification, and topological reconstruction. It also discusses CSG, BSP, volumetric, implicit, and hybrid alternatives, highlighting robustness, efficiency, scalability, and extensibility as central challenges.",
-      },
-      links: [
-        {
-          label: "PDF",
-          href: "pdf/A survey of Boolean operations in 3D geometric modeling.pdf",
+          authors: "Sili Liang, Anchang Bao, <b>Enya Shen*</b>, Jianmin Wang",
+          title: "A Survey of Boolean operations in 3D geometric modeling",
+          venue: "Computer-Aided Design 197, 2026: 104081",
+          abstract: {
+            zh: "系统综述三维几何建模中的布尔运算方法，将典型算法归纳为求交、分割、片段分类和拓扑重建等核心流程，并讨论 CSG、BSP、体素、隐式和混合表示等替代路线。文章重点分析鲁棒性、效率和可扩展性三类长期挑战，为构建稳定高效的现代几何建模系统提供参考。",
+            en: "This survey reviews Boolean operations in 3D geometric modeling and organizes mainstream algorithms around intersection computation, splitting, fragment classification, and topological reconstruction. It also discusses CSG, BSP, volumetric, implicit, and hybrid alternatives, highlighting robustness, efficiency, scalability, and extensibility as central challenges.",
+          },
+          links: [
+            {
+              label: "PDF",
+              href: "pdf/A survey of Boolean operations in 3D geometric modeling.pdf",
+            },
+            { label: "DOI", href: "https://doi.org/10.1016/j.cad.2026.104081" },
+          ],
+          teaser: "assets/img/teasers/boolean-survey.png",
         },
-        { label: "DOI", href: "https://doi.org/10.1016/j.cad.2026.104081" },
-      ],
-      teaser: "assets/img/teasers/boolean-survey.png",
-    },
     {
-      authors: "Anchang Bao, <b>Enya Shen*</b>, Jianmin Wang",
-      title:
-        "Monte Carlo PDE Solvers for Nonlinear Radiative Boundary Conditions",
-      venue: "SIGGRAPH 2026 (accepted, journal track); arXiv:2604.21717, 2026",
-      abstract: {
-        zh: "提出一种 Picard 式固定点迭代框架，使蒙特卡洛 PDE 求解器能够处理热辐射产生的非线性边界条件。方法通过松弛迭代提高稳定性，并结合面向边界解估计的异方差回归去噪，在复杂几何热辐射仿真中取得更高精度和更低方差。",
-        en: "The paper introduces a Picard-style fixed-point framework that extends Monte Carlo PDE solvers to nonlinear radiative boundary conditions. With relaxation and heteroscedastic regression denoising for boundary estimates, the method improves accuracy and stability for heat radiation simulations on complex geometries.",
-      },
-      links: [
-        {
-          label: "PDF",
-          href: "pdf/Monte Carlo PDE Solvers for Nonlinear Radiative Boundary Conditions.pdf",
+          authors:
+            "Shiyu Tan, Zixuan Zhao, Hao Gao, Zhiheng Chen, Xiaolong Yin, <b>Enya Shen*</b>",
+          title: "Img2CADSeq: Image-to-CAD Generation via Sequence-Based Diffusion",
+          venue: "SIGGRAPH 2026 (accepted); arXiv:2605.13293, 2026",
+          abstract: {
+            zh: "提出 Img2CADSeq，将单视图图像重建为标准 CAD B-Rep/STEP 文件。方法用三级层次化码本编码 CAD 序列，并通过由粗到细的点云中间表示和对比学习弥合二维图像与三维 CAD 序列之间的模态差异，在 CAD-220K 和 PrintCAD 数据集上优于已有方法。",
+            en: "Img2CADSeq reconstructs standard CAD sequences and STEP-ready BRep models from single-view images. It encodes CAD sequences with a three-level hierarchical codebook and bridges 2D visual features to 3D CAD sequences through a coarse-to-fine point-cloud intermediate, contrastive learning, and VQ-Diffusion.",
+          },
+          links: [
+            {
+              label: "PDF",
+              href: "pdf/Img2CADSeq - Image-to-CAD Generation via Sequence-Based Diffusion.pdf",
+            },
+            { label: "arXiv", href: "https://arxiv.org/abs/2605.13293" },
+            { label: "DOI", href: "https://doi.org/10.1145/3799902.3811174" },
+          ],
+          teaser: "assets/img/teasers/img2brep.png",
         },
-        { label: "arXiv", href: "https://arxiv.org/abs/2604.21717" },
-      ],
-      teaser: "assets/img/teasers/mc-pde.png",
-    },
     {
-      authors:
-        "Shiyu Tan, Zixuan Zhao, Hao Gao, Zhiheng Chen, Xiaolong Yin, <b>Enya Shen*</b>",
-      title: "Img2CADSeq: Image-to-CAD Generation via Sequence-Based Diffusion",
-      venue: "SIGGRAPH 2026 (accepted); arXiv:2605.13293, 2026",
-      abstract: {
-        zh: "提出 Img2CADSeq，将单视图图像重建为标准 CAD B-Rep/STEP 文件。方法用三级层次化码本编码 CAD 序列，并通过由粗到细的点云中间表示和对比学习弥合二维图像与三维 CAD 序列之间的模态差异，在 CAD-220K 和 PrintCAD 数据集上优于已有方法。",
-        en: "Img2CADSeq reconstructs standard CAD sequences and STEP-ready BRep models from single-view images. It encodes CAD sequences with a three-level hierarchical codebook and bridges 2D visual features to 3D CAD sequences through a coarse-to-fine point-cloud intermediate, contrastive learning, and VQ-Diffusion.",
-      },
-      links: [
-        {
-          label: "PDF",
-          href: "pdf/Img2CADSeq - Image-to-CAD Generation via Sequence-Based Diffusion.pdf",
+          authors: "Anchang Bao, <b>Enya Shen*</b>, Jianmin Wang",
+          title:
+            "Monte Carlo PDE Solvers for Nonlinear Radiative Boundary Conditions",
+          venue: "SIGGRAPH 2026 (accepted, journal track); arXiv:2604.21717, 2026",
+          abstract: {
+            zh: "提出一种 Picard 式固定点迭代框架，使蒙特卡洛 PDE 求解器能够处理热辐射产生的非线性边界条件。方法通过松弛迭代提高稳定性，并结合面向边界解估计的异方差回归去噪，在复杂几何热辐射仿真中取得更高精度和更低方差。",
+            en: "The paper introduces a Picard-style fixed-point framework that extends Monte Carlo PDE solvers to nonlinear radiative boundary conditions. With relaxation and heteroscedastic regression denoising for boundary estimates, the method improves accuracy and stability for heat radiation simulations on complex geometries.",
+          },
+          links: [
+            {
+              label: "PDF",
+              href: "pdf/Monte Carlo PDE Solvers for Nonlinear Radiative Boundary Conditions.pdf",
+            },
+            { label: "arXiv", href: "https://arxiv.org/abs/2604.21717" },
+          ],
+          teaser: "assets/img/teasers/mc-pde.png",
         },
-        { label: "arXiv", href: "https://arxiv.org/abs/2605.13293" },
-        { label: "DOI", href: "https://doi.org/10.1145/3799902.3811174" },
-      ],
-      teaser: "assets/img/teasers/img2brep.png",
-    },
     {
-      authors: "Xuyi Zhao, Yuanrui Yang, Jianmin Wang, <b>Enya Shen*</b>",
-      title:
-        "Surface Offsetting: A Survey from Geometric Construction to Neural Implicit Representations",
-      venue:
-        "IEEE Transactions on Visualization and Computer Graphics, Early Access, 2026: 1-20",
-      abstract: {
-        zh: "综述曲面偏置从经典几何构造到神经隐式表示的发展脉络，按构造式、空间离散、优化、场函数和学习式方法建立分类。文章分析精度、拓扑正确性、复杂度和表示选择之间的权衡，并总结开边界、薄特征保持和凹区域自交处理等开放问题。",
-        en: "This survey reviews surface offsetting from classical geometric construction to neural implicit representations. It categorizes methods into constructive, spatial discretization, optimization-based, field-based, and learning-based approaches, and discusses trade-offs in accuracy, topology, complexity, and representation choices.",
-      },
-      links: [
-        {
-          label: "PDF",
-          href: "pdf/Surface Offsetting - A Survey from Geometric Construction to Neural Implicit Representations.pdf",
+          authors: "Xuyi Zhao, Yuanrui Yang, Jianmin Wang, <b>Enya Shen*</b>",
+          title:
+            "Surface Offsetting: A Survey from Geometric Construction to Neural Implicit Representations",
+          venue:
+            "IEEE Transactions on Visualization and Computer Graphics, Early Access, 2026: 1-20",
+          abstract: {
+            zh: "综述曲面偏置从经典几何构造到神经隐式表示的发展脉络，按构造式、空间离散、优化、场函数和学习式方法建立分类。文章分析精度、拓扑正确性、复杂度和表示选择之间的权衡，并总结开边界、薄特征保持和凹区域自交处理等开放问题。",
+            en: "This survey reviews surface offsetting from classical geometric construction to neural implicit representations. It categorizes methods into constructive, spatial discretization, optimization-based, field-based, and learning-based approaches, and discusses trade-offs in accuracy, topology, complexity, and representation choices.",
+          },
+          links: [
+            {
+              label: "PDF",
+              href: "pdf/Surface Offsetting - A Survey from Geometric Construction to Neural Implicit Representations.pdf",
+            },
+            { label: "DOI", href: "https://doi.org/10.1109/TVCG.2026.3676903" },
+          ],
+          teaser: "assets/img/teasers/surface-offsetting.png",
         },
-        { label: "DOI", href: "https://doi.org/10.1109/TVCG.2026.3676903" },
-      ],
-      teaser: "assets/img/teasers/surface-offsetting.png",
-    },
     {
-      authors: "Anchang Bao, <b>Enya Shen*</b>, Jianmin Wang",
-      title: "Fast and Robust Point Containment Queries on Trimmed Surface",
-      venue: "arXiv:2510.25159 [cs.GR], 2025",
-      abstract: {
-        zh: "面向 CAD 建模、曲面网格化和实体几何处理中的裁剪曲面点包含查询，提出一种快速且数值稳定的绕数计算方法。方法用椭圆界替代昂贵的曲线细分，并将周期曲面上的裁剪曲线提升到泛覆盖空间，从而在噪声、开边界和周期拓扑下保持鲁棒性。",
-        en: "The paper presents a fast and numerically stable winding-number method for point containment queries on trimmed surfaces. It replaces costly curve subdivision with ellipse-based bounds for Bezier segments and handles periodic surfaces through universal-cover lifting, improving robustness and speed for real B-Rep processing.",
-      },
-      links: [
-        {
-          label: "PDF",
-          href: "pdf/Fast and Robust Point Containment Queries on Trimmed Surface.pdf",
+          authors:
+            "梁思立, 黄浩勉, 梁好, 唐为然, 鲍桉畅, <b>沈恩亚*</b>, 王建民, 杨义军",
+          title: "B-Rep 模型高效布尔运算算法",
+          venue: "计算机辅助设计与图形学学报 37(11), 2025: 1993-2005",
+          abstract: {
+            zh: "针对公开 B-Rep 布尔运算方法难以兼顾鲁棒性和效率的问题，提出一种高效算法。方法通过层次包围盒干涉检查、面分组和交线局部信息判断减少几何求交次数，并结合交线图和多次成环提高稳定性；在实际 CAD 模型上相对 OCCT 展现效率优势。",
+            en: "The paper proposes an efficient Boolean operation algorithm for BRep models, aiming to improve both robustness and performance. It reduces intersection computations with hierarchical bounding-box checks, face grouping, and local curve information, while using intersection graphs and repeated loop construction to improve stability on practical CAD models.",
+          },
+          links: [
+            { label: "PDF", href: "pdf/一种 B-Rep 模型高效布尔运算算法.pdf" },
+            { label: "DOI", href: "https://doi.org/10.3724/SP.J.1089.2024-00367" },
+          ],
+          teaser: "assets/img/teasers/brep-boolean.png",
         },
-        { label: "arXiv", href: "https://arxiv.org/abs/2510.25159" },
-      ],
-      teaser: "assets/img/teasers/point-containment.png",
-    },
     {
-      authors: "Anchang Bao, Jie Xu, <b>Enya Shen*</b>, Jianmin Wang",
-      title: "Off-Centered WoS-Type Solvers with Statistical Weighting",
-      venue: "SIGGRAPH Asia 2025; arXiv:2510.25152, 2025",
-      abstract: {
-        zh: "针对 WoS 类蒙特卡洛 PDE 求解器中偏心估计器可能带来的相关伪影和偏差，提出统计加权的偏心估计方法。该方法利用局部相似性过滤在相邻评估点之间选择性复用样本，平衡偏差和方差，并可扩展到梯度场估计和混合边界问题。",
-        en: "This work proposes a statistically weighted off-centered estimator for WoS-type Monte Carlo PDE solvers. By filtering local similarity and selectively reusing neighboring samples, it suppresses unreliable estimates, balances bias and variance, and extends naturally to gradient estimation and mixed boundary problems.",
-      },
-      links: [
-        {
-          label: "PDF",
-          href: "pdf/Off-Centered WoS-Type Solvers with Statistical Weighting.pdf",
+          authors: "Anchang Bao, <b>Enya Shen*</b>, Jianmin Wang",
+          title: "Fast and Robust Point Containment Queries on Trimmed Surface",
+          venue: "arXiv:2510.25159 [cs.GR], 2025",
+          abstract: {
+            zh: "面向 CAD 建模、曲面网格化和实体几何处理中的裁剪曲面点包含查询，提出一种快速且数值稳定的绕数计算方法。方法用椭圆界替代昂贵的曲线细分，并将周期曲面上的裁剪曲线提升到泛覆盖空间，从而在噪声、开边界和周期拓扑下保持鲁棒性。",
+            en: "The paper presents a fast and numerically stable winding-number method for point containment queries on trimmed surfaces. It replaces costly curve subdivision with ellipse-based bounds for Bezier segments and handles periodic surfaces through universal-cover lifting, improving robustness and speed for real B-Rep processing.",
+          },
+          links: [
+            {
+              label: "PDF",
+              href: "pdf/Fast and Robust Point Containment Queries on Trimmed Surface.pdf",
+            },
+            { label: "arXiv", href: "https://arxiv.org/abs/2510.25159" },
+          ],
+          teaser: "assets/img/teasers/point-containment.png",
         },
-        { label: "arXiv", href: "https://arxiv.org/abs/2510.25152" },
-      ],
-      teaser: "assets/img/teasers/wos-solvers.png",
-    },
     {
-      authors: "尹晓龙, <b>沈恩亚*</b>, 王建民",
-      title: "典型三维模型表示方法转换技术综述",
-      venue: "计算机辅助设计与图形学学报 37(10), 2025: 1666-1680",
-      abstract: {
-        zh: "系统梳理点云、体素、网格、B-Rep、SDF 和 NeRF 等典型三维模型表示，并比较它们在几何精度、效率和应用场景上的差异。文章进一步综述不同表示之间的转换技术，分析精度、拓扑一致性和效率瓶颈，并指出多模态融合和 AI 驱动转换是重要发展方向。",
-        en: "This survey reviews common 3D representations including point clouds, voxels, meshes, BRep, SDF, and NeRF, comparing their accuracy, efficiency, and application scope. It further analyzes conversion techniques among these representations and highlights topology preservation, efficiency, multimodal fusion, and AI-driven conversion as key directions.",
-      },
-      links: [
-        { label: "PDF", href: "pdf/典型三维模型表示方法转换技术综述.pdf" },
-        { label: "DOI", href: "https://doi.org/10.3724/SP.J.1089.2025-00141" },
-      ],
-      teaser: "assets/img/teasers/3d-model-conversion.png",
-    },
-    {
-      authors:
-        "梁思立, 黄浩勉, 梁好, 唐为然, 鲍桉畅, <b>沈恩亚*</b>, 王建民, 杨义军",
-      title: "B-Rep 模型高效布尔运算算法",
-      venue: "计算机辅助设计与图形学学报 37(11), 2025: 1993-2005",
-      abstract: {
-        zh: "针对公开 B-Rep 布尔运算方法难以兼顾鲁棒性和效率的问题，提出一种高效算法。方法通过层次包围盒干涉检查、面分组和交线局部信息判断减少几何求交次数，并结合交线图和多次成环提高稳定性；在实际 CAD 模型上相对 OCCT 展现效率优势。",
-        en: "The paper proposes an efficient Boolean operation algorithm for BRep models, aiming to improve both robustness and performance. It reduces intersection computations with hierarchical bounding-box checks, face grouping, and local curve information, while using intersection graphs and repeated loop construction to improve stability on practical CAD models.",
-      },
-      links: [
-        { label: "PDF", href: "pdf/一种 B-Rep 模型高效布尔运算算法.pdf" },
-        { label: "DOI", href: "https://doi.org/10.3724/SP.J.1089.2024-00367" },
-      ],
-      teaser: "assets/img/teasers/brep-boolean.png",
-    },
-    {
-      authors: "太志伟, 张兴龙, 尹晓龙, <b>沈恩亚*</b>, 王建民",
-      title: "三维船舶模型边界表示转构造表示方法",
-      venue: "计算机辅助设计与图形学学报 35(12), 2023: 1851-1862",
-      abstract: {
-        zh: "面向船舶等大规模模型场景中的 B-Rep 与 CSG 混合建模需求，提出 B-Rep 到 CSG 的转换流程。方法解析基本实体几何结构并根据拓扑组合 CSG 实体，对复杂实体则通过凹凸区域划分、切割环识别和二叉分解树生成 CSG 树，已支撑船舶产品设计系统中的模型轻量化功能。",
-        en: "This work addresses BRep-to-CSG conversion for ship models and hybrid CAD modeling. It converts primitive solids by analyzing geometric and topological structure, and handles complex solids through convexity-based region partitioning, cutting-loop recognition, and binary decomposition trees, supporting lightweight modeling in ship design systems.",
-      },
-      links: [
-        { label: "PDF", href: "pdf/三维船舶模型边界表示转构造表示方法.pdf" },
-        {
-          label: "DOI",
-          href: "https://doi.org/10.3724/SP.J.1089.2023.2023-00019",
+          authors: "Anchang Bao, Jie Xu, <b>Enya Shen*</b>, Jianmin Wang",
+          title: "Off-Centered WoS-Type Solvers with Statistical Weighting",
+          venue: "SIGGRAPH Asia 2025; arXiv:2510.25152, 2025",
+          abstract: {
+            zh: "针对 WoS 类蒙特卡洛 PDE 求解器中偏心估计器可能带来的相关伪影和偏差，提出统计加权的偏心估计方法。该方法利用局部相似性过滤在相邻评估点之间选择性复用样本，平衡偏差和方差，并可扩展到梯度场估计和混合边界问题。",
+            en: "This work proposes a statistically weighted off-centered estimator for WoS-type Monte Carlo PDE solvers. By filtering local similarity and selectively reusing neighboring samples, it suppresses unreliable estimates, balances bias and variance, and extends naturally to gradient estimation and mixed boundary problems.",
+          },
+          links: [
+            {
+              label: "PDF",
+              href: "pdf/Off-Centered WoS-Type Solvers with Statistical Weighting.pdf",
+            },
+            { label: "arXiv", href: "https://arxiv.org/abs/2510.25152" },
+          ],
+          teaser: "assets/img/teasers/wos-solvers.png",
         },
-      ],
-      teaser: "assets/img/teasers/ship-brep.png",
-    },
     {
-      authors: "Leixian Shen, Zhiwei Tai, <b>Enya Shen*</b>, Jianmin Wang",
-      title: "Graph Exploration with Embedding-Guided Layouts",
-      venue:
-        "IEEE Transactions on Visualization and Computer Graphics 30(7), 2024: 3693-3708",
-      abstract: {
-        zh: "提出一种基于嵌入的图探索布局流程，同时利用图拓扑和节点属性，缓解传统布局在美观目标与探索目标之间的失衡。方法通过灵活的嵌入和布局生成机制支持不同输入类型，帮助用户在保持可读性的同时发现图中的属性结构和社区关系。",
-        en: "The paper presents an embedding-guided graph exploration pipeline that combines graph topology and node attributes. It aims to balance aesthetic layout quality with exploration goals, reducing restrictions of prior hybrid methods and helping users inspect communities and attribute-driven structures while preserving readability.",
-      },
-      links: [
-        {
-          label: "PDF",
-          href: "pdf/Graph Exploration with Embedding-Guided Layouts.pdf",
+          authors: "尹晓龙, <b>沈恩亚*</b>, 王建民",
+          title: "典型三维模型表示方法转换技术综述",
+          venue: "计算机辅助设计与图形学学报 37(10), 2025: 1666-1680",
+          abstract: {
+            zh: "系统梳理点云、体素、网格、B-Rep、SDF 和 NeRF 等典型三维模型表示，并比较它们在几何精度、效率和应用场景上的差异。文章进一步综述不同表示之间的转换技术，分析精度、拓扑一致性和效率瓶颈，并指出多模态融合和 AI 驱动转换是重要发展方向。",
+            en: "This survey reviews common 3D representations including point clouds, voxels, meshes, BRep, SDF, and NeRF, comparing their accuracy, efficiency, and application scope. It further analyzes conversion techniques among these representations and highlights topology preservation, efficiency, multimodal fusion, and AI-driven conversion as key directions.",
+          },
+          links: [
+            { label: "PDF", href: "pdf/典型三维模型表示方法转换技术综述.pdf" },
+            { label: "DOI", href: "https://doi.org/10.3724/SP.J.1089.2025-00141" },
+          ],
+          teaser: "assets/img/teasers/3d-model-conversion.png",
         },
-        { label: "DOI", href: "https://doi.org/10.1109/TVCG.2023.3238909" },
-      ],
-      teaser: "assets/img/teasers/graph-exploration.png",
-    },
     {
-      authors:
-        "Leixian Shen, <b>Enya Shen*</b>, Yuyu Luo, Xiaocong Yang, Xuming Hu, Xiongshuai Zhang, Zhiwei Tai, Jianmin Wang",
-      title:
-        "Towards Natural Language Interfaces for Data Visualization: A Survey",
-      venue:
-        "IEEE Transactions on Visualization and Computer Graphics 29(6), 2023: 3121-3144",
-      abstract: {
-        zh: "综述面向可视化的自然语言接口，将其作为直接操作之外的重要输入方式。文章基于扩展的信息可视化流水线建立分类维度，覆盖查询解释、数据转换、视觉映射、视图变换、人机交互、对话管理和结果呈现，并总结未来研究方向。",
-        en: "This survey reviews visualization-oriented natural language interfaces as a complementary modality for visual analytics. It classifies prior work through an extended visualization pipeline covering query interpretation, data transformation, visual mapping, view transformation, interaction, dialogue management, and presentation.",
-      },
-      links: [
-        {
-          label: "PDF",
-          href: "pdf/Towards Natural Language Interfaces for Data Visualization - A Survey.pdf",
+          authors: "Leixian Shen, Zhiwei Tai, <b>Enya Shen*</b>, Jianmin Wang",
+          title: "Graph Exploration with Embedding-Guided Layouts",
+          venue:
+            "IEEE Transactions on Visualization and Computer Graphics 30(7), 2024: 3693-3708",
+          abstract: {
+            zh: "提出一种基于嵌入的图探索布局流程，同时利用图拓扑和节点属性，缓解传统布局在美观目标与探索目标之间的失衡。方法通过灵活的嵌入和布局生成机制支持不同输入类型，帮助用户在保持可读性的同时发现图中的属性结构和社区关系。",
+            en: "The paper presents an embedding-guided graph exploration pipeline that combines graph topology and node attributes. It aims to balance aesthetic layout quality with exploration goals, reducing restrictions of prior hybrid methods and helping users inspect communities and attribute-driven structures while preserving readability.",
+          },
+          links: [
+            {
+              label: "PDF",
+              href: "pdf/Graph Exploration with Embedding-Guided Layouts.pdf",
+            },
+            { label: "DOI", href: "https://doi.org/10.1109/TVCG.2023.3238909" },
+          ],
+          teaser: "assets/img/teasers/graph-exploration.png",
         },
-        { label: "DOI", href: "https://doi.org/10.1109/TVCG.2022.3148007" },
-      ],
-      teaser: "assets/img/teasers/nl2vis.png",
-    },
     {
-      authors: "<b>沈恩亚</b>",
-      title: "大数据可视化技术及应用",
-      venue: "科技导报 38(3), 2020: 68-83",
-      abstract: {
-        zh: "围绕大数据时代数据规模、类型和应用需求的变化，介绍适用于大数据的数据可视化技术。文章分析大数据可视化需要解决的关键问题，并讨论自主研发的交互式可视化设计平台 AutoVis 及其应用。",
-        en: "The article discusses how data visualization changes in the era of big data, where data scale, type, and application demands grow rapidly. It surveys visualization techniques for big data, analyzes key technical challenges, and presents the AutoVis interactive visualization design platform and its applications.",
-      },
-      links: [{ label: "PDF", href: "pdf/大数据可视化技术及应用.pdf" }],
-      teaser: "assets/img/teasers/bigdata-vis.png",
-    },
-    {
-      authors: "<b>Enya Shen</b>, Yunhai Wang, Sikun Li",
-      title: "Spatiotemporal Volume Saliency",
-      venue: "Journal of Visualization 19(1), 2016: 157-168",
-      abstract: {
-        zh: "提出时空体数据显著性方法，用于检测和探索时变体数据中的显著区域。方法将中心-环绕显著性思想扩展到时间维度，并结合空间与时间显著性，以支持自动传递函数设计和关键帧选择。",
-        en: "This paper proposes spatiotemporal volume saliency for detecting and exploring salient regions in time-varying volume data. By extending center-surround saliency into the temporal domain and combining it with spatial saliency, the method supports transfer-function design and key-frame selection.",
-      },
-      links: [
-        { label: "PDF", href: "pdf/Spatiotemporal volume saliency.pdf" },
-        { label: "DOI", href: "https://doi.org/10.1007/s12650-015-0293-y" },
-      ],
-      teaser: "assets/img/teasers/spatiotemporal-saliency.png",
-    },
-    {
-      authors: "<b>Enya Shen</b>, Sikun Li, Xun Cai, Liang Zeng, Wenke Wang",
-      title: "SAVE: Saliency-Assisted Volume Exploration",
-      venue: "Journal of Visualization 18(2), 2015: 369-379",
-      abstract: {
-        zh: "面向科学数据交互探索中二维输入难以精确对应三维区域的问题，提出基于显著性的交互辅助方法。该方法综合数据值、传递函数和用户输入，自动修正用户关注区域，降低数据噪声、显示分辨率和随意输入造成的误差。",
-        en: "SAVE addresses the problem of inferring 3D interaction positions from imprecise 2D user input during volume exploration. It integrates data value, transfer functions, and user input into a saliency measure that refines interaction targets and helps users access regions of interest.",
-      },
-      links: [
-        {
-          label: "PDF",
-          href: "pdf/SAVE - saliency-assisted volume exploration.pdf",
+          authors: "太志伟, 张兴龙, 尹晓龙, <b>沈恩亚*</b>, 王建民",
+          title: "三维船舶模型边界表示转构造表示方法",
+          venue: "计算机辅助设计与图形学学报 35(12), 2023: 1851-1862",
+          abstract: {
+            zh: "面向船舶等大规模模型场景中的 B-Rep 与 CSG 混合建模需求，提出 B-Rep 到 CSG 的转换流程。方法解析基本实体几何结构并根据拓扑组合 CSG 实体，对复杂实体则通过凹凸区域划分、切割环识别和二叉分解树生成 CSG 树，已支撑船舶产品设计系统中的模型轻量化功能。",
+            en: "This work addresses BRep-to-CSG conversion for ship models and hybrid CAD modeling. It converts primitive solids by analyzing geometric and topological structure, and handles complex solids through convexity-based region partitioning, cutting-loop recognition, and binary decomposition trees, supporting lightweight modeling in ship design systems.",
+          },
+          links: [
+            { label: "PDF", href: "pdf/三维船舶模型边界表示转构造表示方法.pdf" },
+            {
+              label: "DOI",
+              href: "https://doi.org/10.3724/SP.J.1089.2023.2023-00019",
+            },
+          ],
+          teaser: "assets/img/teasers/ship-brep.png",
         },
-        { label: "DOI", href: "https://doi.org/10.1007/s12650-014-0237-y" },
-      ],
-      teaser: "assets/img/teasers/save.png",
-    },
     {
-      authors:
-        "<b>Enya Shen</b>, Jiazhi Xia, Zhiquan Cheng, R. Ralph Martin, Yunhai Wang, Sikun Li",
-      title: "Model-Driven Multicomponent Volume Exploration",
-      venue: "The Visual Computer 31(4), 2015: 441-454",
-      abstract: {
-        zh: "提出一种由语义模型驱动的多组分体数据探索方法，用高斯混合模型和区域生长进行分割，并借助带标注的参考模型建立体数据与模型之间的对应关系。方法还提供精确交互技术，帮助用户高效完成分割、标注和体数据探索。",
-        en: "This work presents a model-driven approach for multicomponent volume exploration. It combines Gaussian mixture segmentation, region growing, and a correspondence scheme between volume data and annotated reference models, together with precise interaction techniques for efficient segmentation, labeling, and exploration.",
-      },
-      links: [
-        {
-          label: "PDF",
-          href: "pdf/Model-driven multicomponent volume exploration.pdf",
+          authors:
+            "Leixian Shen, <b>Enya Shen*</b>, Yuyu Luo, Xiaocong Yang, Xuming Hu, Xiongshuai Zhang, Zhiwei Tai, Jianmin Wang",
+          title:
+            "Towards Natural Language Interfaces for Data Visualization: A Survey",
+          venue:
+            "IEEE Transactions on Visualization and Computer Graphics 29(6), 2023: 3121-3144",
+          abstract: {
+            zh: "综述面向可视化的自然语言接口，将其作为直接操作之外的重要输入方式。文章基于扩展的信息可视化流水线建立分类维度，覆盖查询解释、数据转换、视觉映射、视图变换、人机交互、对话管理和结果呈现，并总结未来研究方向。",
+            en: "This survey reviews visualization-oriented natural language interfaces as a complementary modality for visual analytics. It classifies prior work through an extended visualization pipeline covering query interpretation, data transformation, visual mapping, view transformation, interaction, dialogue management, and presentation.",
+          },
+          links: [
+            {
+              label: "PDF",
+              href: "pdf/Towards Natural Language Interfaces for Data Visualization - A Survey.pdf",
+            },
+            { label: "DOI", href: "https://doi.org/10.1109/TVCG.2022.3148007" },
+          ],
+          teaser: "assets/img/teasers/nl2vis.png",
         },
-        { label: "DOI", href: "https://doi.org/10.1007/s00371-014-0940-7" },
-      ],
-      teaser: "assets/img/teasers/model-driven.png",
-    },
     {
-      authors:
-        "Hong Fan, Chufan Lai, Hanqi Guo, <b>Enya Shen</b>, Xiaoru Yuan, Sikun Li",
-      title: "FLDA: Latent Dirichlet Allocation Based Unsteady Flow Analysis",
-      venue:
-        "IEEE Transactions on Visualization and Computer Graphics 20(12), 2014: 2545-2554",
-      abstract: {
-        zh: "提出 FLDA，将文本分析中的潜在狄利克雷分配模型用于非定常流场特征提取。方法把迹线和流场特征分别类比为文档和词，同时以概率方式聚类迹线并聚合有意义的流主题，并通过原型系统支持交互探索。",
-        en: "FLDA adapts latent Dirichlet allocation to feature extraction in unsteady flow fields by treating pathlines as documents and flow features as words. It probabilistically clusters pathlines, extracts meaningful flow topics, and supports interactive exploration through a prototype system.",
-      },
-      links: [
-        {
-          label: "PDF",
-          href: "pdf/FLDA - Latent Dirichlet Allocation Based Unsteady Flow Analysis.pdf",
+          authors: "<b>沈恩亚</b>",
+          title: "大数据可视化技术及应用",
+          venue: "科技导报 38(3), 2020: 68-83",
+          abstract: {
+            zh: "围绕大数据时代数据规模、类型和应用需求的变化，介绍适用于大数据的数据可视化技术。文章分析大数据可视化需要解决的关键问题，并讨论自主研发的交互式可视化设计平台 AutoVis 及其应用。",
+            en: "The article discusses how data visualization changes in the era of big data, where data scale, type, and application demands grow rapidly. It surveys visualization techniques for big data, analyzes key technical challenges, and presents the AutoVis interactive visualization design platform and its applications.",
+          },
+          links: [{ label: "PDF", href: "pdf/大数据可视化技术及应用.pdf" }],
+          teaser: "assets/img/teasers/bigdata-vis.png",
         },
-        { label: "DOI", href: "https://doi.org/10.1109/TVCG.2014.2346416" },
-      ],
-      teaser: "assets/img/teasers/flda.png",
-    },
     {
-      authors: "<b>Enya Shen</b>, Sikun Li, Xun Cai, Liang Zeng, Wenke Wang",
-      title: "Sketch-Based Interactive Visualization: A Survey",
-      venue: "Journal of Visualization 17(4), 2014: 275-294",
-      abstract: {
-        zh: "综述面向科学可视化的草图式交互界面，讨论其如何在数据过滤、渲染和探索流程中提升自然性与易用性。文章按选择、切割、分割、匹配、着色、增强和插图等交互目的进行分类，并总结系统模式和界面设计要点。",
-        en: "This survey reviews sketch-based interfaces for interactive visualization as a more natural alternative to traditional WIMP interaction. It categorizes sketch-based techniques by interaction goals such as selection, cutting, segmentation, matching, coloring, augmentation, and illustration, and discusses interface design issues.",
-      },
-      links: [
-        {
-          label: "PDF",
-          href: "pdf/Sketch-based Interactive Visualization- A Survey.pdf",
+          authors: "<b>Enya Shen</b>, Yunhai Wang, Sikun Li",
+          title: "Spatiotemporal Volume Saliency",
+          venue: "Journal of Visualization 19(1), 2016: 157-168",
+          abstract: {
+            zh: "提出时空体数据显著性方法，用于检测和探索时变体数据中的显著区域。方法将中心-环绕显著性思想扩展到时间维度，并结合空间与时间显著性，以支持自动传递函数设计和关键帧选择。",
+            en: "This paper proposes spatiotemporal volume saliency for detecting and exploring salient regions in time-varying volume data. By extending center-surround saliency into the temporal domain and combining it with spatial saliency, the method supports transfer-function design and key-frame selection.",
+          },
+          links: [
+            { label: "PDF", href: "pdf/Spatiotemporal volume saliency.pdf" },
+            { label: "DOI", href: "https://doi.org/10.1007/s12650-015-0293-y" },
+          ],
+          teaser: "assets/img/teasers/spatiotemporal-saliency.png",
         },
-        { label: "DOI", href: "https://doi.org/10.1007/s12650-014-0225-2" },
-      ],
-      teaser: "assets/img/teasers/sketch-vis.png",
-    },
     {
-      authors: "<b>Enya Shen</b>, Zhiquan Cheng, Jiazhi Xia, Sikun Li",
-      title: "Intuitive Volume Eraser",
-      venue: "Computational Visual Media, LNCS 7633, 2012: 250-257",
-      abstract: {
-        zh: "提出 Intuitive Volume Eraser，一种用于直接体绘制和传递函数设计的交互式体数据编辑工具。系统采用草图式编辑界面和所见即所得机制，使用户能够直观地探索、擦除和突出体数据特征，并保留传统传递函数编辑器作为辅助。",
-        en: "The paper presents Intuitive Volume Eraser, an interactive tool for direct volume rendering and transfer-function design. Its sketch-based WYSIWYG interface lets users intuitively explore and edit volume features, while a coupled transfer-function editor supports conventional workflows.",
-      },
-      links: [
-        { label: "PDF", href: "pdf/Intuitive Volume Eraser.pdf" },
-        { label: "DOI", href: "https://doi.org/10.1007/978-3-642-34263-9_32" },
-      ],
-      teaser: "assets/img/teasers/volume-eraser.png",
-    },
-    {
-      authors: "<b>沈恩亚</b>, 王攀, 李思昆, 蔡勋, 曾亮, 王文珂",
-      title: "大规模数据并行可视化与交互环境",
-      venue: "HPC China 2012 (最佳论文提名)",
-      abstract: {
-        zh: "面向超级计算产生的大规模流场数据分析需求，基于天河-1A 和 ParaView 构建计算流体力学并行可视化环境 CPVE。系统支持预处理、特征提取、体绘制、流线和等值面等功能，并结合 Falcon 交互设备提供三维交互能力，验证了其高效性和实用性。",
-        en: "This paper presents CPVE, a parallel visualization environment for large-scale CFD data built on Tianhe-1A and ParaView. It supports preprocessing, feature extraction, volume rendering, streamlines, isosurfaces, texture rendering, and 3D interaction with a Falcon device, demonstrating efficiency and practicality on flow datasets.",
-      },
-      links: [{ label: "PDF", href: "pdf/大规模数据并行可视化与交互环境.pdf" }],
-      teaser: "assets/img/teasers/parallel-vis.png",
-    },
-    {
-      authors:
-        "<b>Enya Shen</b>, Huaxun Xu, Wenke Wang, Xun Cai, Liang Zeng, Sikun Li",
-      title: "Interactive Visual Analysis of Vortex in 3D Flow with FFDL",
-      venue:
-        "2011 International Conference on Virtual Reality and Visualization (ICVRV), 2011: 295-298",
-      abstract: {
-        zh: "提出一个基于粒子的三维流场涡结构交互可视分析系统，将交互式模糊特征提取与可视分析方法结合起来。用户能够利用 FFDL 逐步修正特征提取过程，以获得更精确的涡结构识别和可视化结果。",
-        en: "The paper presents a particle-based system for interactive visual analysis of vortices in 3D flow fields. By combining fuzzy feature extraction with interactive visual analysis and FFDL, users can refine feature extraction and obtain more precise vortex visualization results.",
-      },
-      links: [
-        {
-          label: "PDF",
-          href: "pdf/Interactive Visual Analysis of Vortex in 3D Flow with FFDL.pdf",
+          authors: "<b>Enya Shen</b>, Sikun Li, Xun Cai, Liang Zeng, Wenke Wang",
+          title: "SAVE: Saliency-Assisted Volume Exploration",
+          venue: "Journal of Visualization 18(2), 2015: 369-379",
+          abstract: {
+            zh: "面向科学数据交互探索中二维输入难以精确对应三维区域的问题，提出基于显著性的交互辅助方法。该方法综合数据值、传递函数和用户输入，自动修正用户关注区域，降低数据噪声、显示分辨率和随意输入造成的误差。",
+            en: "SAVE addresses the problem of inferring 3D interaction positions from imprecise 2D user input during volume exploration. It integrates data value, transfer functions, and user input into a saliency measure that refines interaction targets and helps users access regions of interest.",
+          },
+          links: [
+            {
+              label: "PDF",
+              href: "pdf/SAVE - saliency-assisted volume exploration.pdf",
+            },
+            { label: "DOI", href: "https://doi.org/10.1007/s12650-014-0237-y" },
+          ],
+          teaser: "assets/img/teasers/save.png",
         },
-        { label: "DOI", href: "https://doi.org/10.1109/ICVRV.2011.30" },
-      ],
-      teaser: "assets/img/teasers/vortex-ffdl.png",
-    },
+    {
+          authors:
+            "<b>Enya Shen</b>, Jiazhi Xia, Zhiquan Cheng, R. Ralph Martin, Yunhai Wang, Sikun Li",
+          title: "Model-Driven Multicomponent Volume Exploration",
+          venue: "The Visual Computer 31(4), 2015: 441-454",
+          abstract: {
+            zh: "提出一种由语义模型驱动的多组分体数据探索方法，用高斯混合模型和区域生长进行分割，并借助带标注的参考模型建立体数据与模型之间的对应关系。方法还提供精确交互技术，帮助用户高效完成分割、标注和体数据探索。",
+            en: "This work presents a model-driven approach for multicomponent volume exploration. It combines Gaussian mixture segmentation, region growing, and a correspondence scheme between volume data and annotated reference models, together with precise interaction techniques for efficient segmentation, labeling, and exploration.",
+          },
+          links: [
+            {
+              label: "PDF",
+              href: "pdf/Model-driven multicomponent volume exploration.pdf",
+            },
+            { label: "DOI", href: "https://doi.org/10.1007/s00371-014-0940-7" },
+          ],
+          teaser: "assets/img/teasers/model-driven.png",
+        },
+    {
+          authors:
+            "Hong Fan, Chufan Lai, Hanqi Guo, <b>Enya Shen</b>, Xiaoru Yuan, Sikun Li",
+          title: "FLDA: Latent Dirichlet Allocation Based Unsteady Flow Analysis",
+          venue:
+            "IEEE Transactions on Visualization and Computer Graphics 20(12), 2014: 2545-2554",
+          abstract: {
+            zh: "提出 FLDA，将文本分析中的潜在狄利克雷分配模型用于非定常流场特征提取。方法把迹线和流场特征分别类比为文档和词，同时以概率方式聚类迹线并聚合有意义的流主题，并通过原型系统支持交互探索。",
+            en: "FLDA adapts latent Dirichlet allocation to feature extraction in unsteady flow fields by treating pathlines as documents and flow features as words. It probabilistically clusters pathlines, extracts meaningful flow topics, and supports interactive exploration through a prototype system.",
+          },
+          links: [
+            {
+              label: "PDF",
+              href: "pdf/FLDA - Latent Dirichlet Allocation Based Unsteady Flow Analysis.pdf",
+            },
+            { label: "DOI", href: "https://doi.org/10.1109/TVCG.2014.2346416" },
+          ],
+          teaser: "assets/img/teasers/flda.png",
+        },
+    {
+          authors: "<b>Enya Shen</b>, Sikun Li, Xun Cai, Liang Zeng, Wenke Wang",
+          title: "Sketch-Based Interactive Visualization: A Survey",
+          venue: "Journal of Visualization 17(4), 2014: 275-294",
+          abstract: {
+            zh: "综述面向科学可视化的草图式交互界面，讨论其如何在数据过滤、渲染和探索流程中提升自然性与易用性。文章按选择、切割、分割、匹配、着色、增强和插图等交互目的进行分类，并总结系统模式和界面设计要点。",
+            en: "This survey reviews sketch-based interfaces for interactive visualization as a more natural alternative to traditional WIMP interaction. It categorizes sketch-based techniques by interaction goals such as selection, cutting, segmentation, matching, coloring, augmentation, and illustration, and discusses interface design issues.",
+          },
+          links: [
+            {
+              label: "PDF",
+              href: "pdf/Sketch-based Interactive Visualization- A Survey.pdf",
+            },
+            { label: "DOI", href: "https://doi.org/10.1007/s12650-014-0225-2" },
+          ],
+          teaser: "assets/img/teasers/sketch-vis.png",
+        },
+    {
+          authors: "<b>Enya Shen</b>, Zhiquan Cheng, Jiazhi Xia, Sikun Li",
+          title: "Intuitive Volume Eraser",
+          venue: "Computational Visual Media, LNCS 7633, 2012: 250-257",
+          abstract: {
+            zh: "提出 Intuitive Volume Eraser，一种用于直接体绘制和传递函数设计的交互式体数据编辑工具。系统采用草图式编辑界面和所见即所得机制，使用户能够直观地探索、擦除和突出体数据特征，并保留传统传递函数编辑器作为辅助。",
+            en: "The paper presents Intuitive Volume Eraser, an interactive tool for direct volume rendering and transfer-function design. Its sketch-based WYSIWYG interface lets users intuitively explore and edit volume features, while a coupled transfer-function editor supports conventional workflows.",
+          },
+          links: [
+            { label: "PDF", href: "pdf/Intuitive Volume Eraser.pdf" },
+            { label: "DOI", href: "https://doi.org/10.1007/978-3-642-34263-9_32" },
+          ],
+          teaser: "assets/img/teasers/volume-eraser.png",
+        },
+    {
+          authors: "<b>沈恩亚</b>, 王攀, 李思昆, 蔡勋, 曾亮, 王文珂",
+          title: "大规模数据并行可视化与交互环境",
+          venue: "HPC China 2012 (最佳论文提名)",
+          abstract: {
+            zh: "面向超级计算产生的大规模流场数据分析需求，基于天河-1A 和 ParaView 构建计算流体力学并行可视化环境 CPVE。系统支持预处理、特征提取、体绘制、流线和等值面等功能，并结合 Falcon 交互设备提供三维交互能力，验证了其高效性和实用性。",
+            en: "This paper presents CPVE, a parallel visualization environment for large-scale CFD data built on Tianhe-1A and ParaView. It supports preprocessing, feature extraction, volume rendering, streamlines, isosurfaces, texture rendering, and 3D interaction with a Falcon device, demonstrating efficiency and practicality on flow datasets.",
+          },
+          links: [{ label: "PDF", href: "pdf/大规模数据并行可视化与交互环境.pdf" }],
+          teaser: "assets/img/teasers/parallel-vis.png",
+        },
+    {
+          authors:
+            "<b>Enya Shen</b>, Huaxun Xu, Wenke Wang, Xun Cai, Liang Zeng, Sikun Li",
+          title: "Interactive Visual Analysis of Vortex in 3D Flow with FFDL",
+          venue:
+            "2011 International Conference on Virtual Reality and Visualization (ICVRV), 2011: 295-298",
+          abstract: {
+            zh: "提出一个基于粒子的三维流场涡结构交互可视分析系统，将交互式模糊特征提取与可视分析方法结合起来。用户能够利用 FFDL 逐步修正特征提取过程，以获得更精确的涡结构识别和可视化结果。",
+            en: "The paper presents a particle-based system for interactive visual analysis of vortices in 3D flow fields. By combining fuzzy feature extraction with interactive visual analysis and FFDL, users can refine feature extraction and obtain more precise vortex visualization results.",
+          },
+          links: [
+            {
+              label: "PDF",
+              href: "pdf/Interactive Visual Analysis of Vortex in 3D Flow with FFDL.pdf",
+            },
+            { label: "DOI", href: "https://doi.org/10.1109/ICVRV.2011.30" },
+          ],
+          teaser: "assets/img/teasers/vortex-ffdl.png",
+        },
   ],
 
   books: [
@@ -603,7 +603,14 @@ window.SITE_DATA = {
       phd: {
         label: { zh: "博士生", en: "Ph.D. Students" },
         items: [
-          { year: "2023", names: { zh: "梁思立", en: "Liang Sili" } },
+          {
+            year: "2026",
+            names: { zh: "吴政翰、高竟闻", en: "Wu Zhenghan, Gao Jingwen" },
+          },
+          {
+            year: "2025",
+            names: { zh: "张思皓", en: "Zhang Sihao" },
+          },
           {
             year: "2024",
             names: {
@@ -611,25 +618,18 @@ window.SITE_DATA = {
               en: "Bao Anchang, Li Rui, Zhao Xuyi",
             },
           },
-          {
-            year: "2025",
-            names: { zh: "李朴达、张思皓", en: "Li Puda, Zhang Sihao" },
-          },
+          { year: "2023", names: { zh: "梁思立", en: "Liang Sili" } },
         ],
       },
       master: {
         label: { zh: "硕士生", en: "Master Students" },
         items: [
           {
-            year: "2023",
+            year: "2026",
             names: {
-              zh: "张兴龙、尹晓龙、朱纪雄、时浩铭",
-              en: "Zhang Xinglong, Yin Xiaolong, Zhu Jixiong, Shi Haoming",
+              zh: "林禹丞、聂弘宇、赵一衡",
+              en: "Lin Yucheng, Nie Hongyu, Zhao Yiheng",
             },
-          },
-          {
-            year: "2024",
-            names: { zh: "邬政钢、杨袁瑞", en: "Wu Zhenggang, Yang Yuanrui" },
           },
           {
             year: "2025",
@@ -638,23 +638,27 @@ window.SITE_DATA = {
               en: "Bian Yitong, Luo Mengxiao, Yu Ruixuan, Tan Shiyu",
             },
           },
+          {
+            year: "2024",
+            names: { zh: "邬政钢、杨袁瑞", en: "Wu Zhenggang, Yang Yuanrui" },
+          },
         ],
       },
       engineer: {
         label: { zh: "工程师", en: "Engineers" },
         items: [
           {
-            year: "2024",
-            names: {
-              zh: "王康力、李冰、姚增辉、郑新琦、苗明辉、曹亮",
-              en: "Wang Kangli, Li Bing, Yao Zenghui, Zheng Xinqi, Miao Minghui, Cao Liang",
-            },
-          },
-          {
             year: "2025",
             names: {
               zh: "郝自理、刘潇迪、刘宝星、柳佳淑",
               en: "Hao Zili, Liu Xiaodi, Liu Baoxing, Liu Jiashu",
+            },
+          },
+          {
+            year: "2024",
+            names: {
+              zh: "王康力、李冰、姚增辉、郑新琦、苗明辉、曹亮",
+              en: "Wang Kangli, Li Bing, Yao Zenghui, Zheng Xinqi, Miao Minghui, Cao Liang",
             },
           },
         ],
@@ -665,10 +669,10 @@ window.SITE_DATA = {
         label: { zh: "硕士生", en: "Master Alumni" },
         items: [
           {
-            year: "2023",
+            year: "2026",
             names: {
-              zh: "沈磊贤（香港科技大学）、太志伟（中望）",
-              en: "Shen Leixian (HKUST), Tai Zhiwei (ZWSOFT)",
+              zh: "张兴龙（网易）、尹晓龙（腾讯）、朱纪雄（米哈游）、时浩铭（快手）",
+              en: "Zhang Xinglong (NetEase), Yin Xiaolong (Tencent), Zhu Jixiong (miHoYo), Shi Haoming (Kuaishou)",
             },
           },
           {
@@ -678,23 +682,30 @@ window.SITE_DATA = {
               en: "Huang Haomian (New York University), Liang Hao (Huawei)",
             },
           },
+          {
+            year: "2023",
+            names: {
+              zh: "沈磊贤（香港科技大学）、太志伟（中望）",
+              en: "Shen Leixian (HKUST), Tai Zhiwei (ZWSOFT)",
+            },
+          },
         ],
       },
       undergrad: {
         label: { zh: "本科生", en: "Undergraduate Alumni" },
         items: [
           {
-            year: "2021",
+            year: "2026",
             names: {
-              zh: "曾子豪（清华大学）、孙梓健（清华大学）",
-              en: "Zeng Zihao (Tsinghua University), Sun Zijian (Tsinghua University)",
+              zh: "赵一衡（山东大学）、吴政翰（四川大学）、全志成（清华大学）、何封越（清华大学）",
+              en: "Zhao Yiheng (Shandong University), Wu Zhenghan (Sichuan University), Quan Zhicheng (Tsinghua University), He Fengyue (Tsinghua University)",
             },
           },
           {
-            year: "2023",
+            year: "2025",
             names: {
-              zh: "邓超、李宏伟、马一波（清华大学）",
-              en: "Deng Chao, Li Hongwei, Ma Yibo (Tsinghua University)",
+              zh: "葛宏泽、韩昊欣（清华大学）",
+              en: "Ge Hongze, Han Haoxin (Tsinghua University)",
             },
           },
           {
@@ -705,10 +716,17 @@ window.SITE_DATA = {
             },
           },
           {
-            year: "2025",
+            year: "2023",
             names: {
-              zh: "葛宏泽、韩昊欣（清华大学）、赵一衡（山东大学）、吴政翰（四川大学）",
-              en: "Ge Hongze, Han Haoxin (Tsinghua University), Zhao Yiheng (Shandong University), Wu Zhenghan (Sichuan University)",
+              zh: "邓超、李宏伟、马一波（清华大学）",
+              en: "Deng Chao, Li Hongwei, Ma Yibo (Tsinghua University)",
+            },
+          },
+          {
+            year: "2021",
+            names: {
+              zh: "曾子豪（清华大学）、孙梓健（清华大学）",
+              en: "Zeng Zihao (Tsinghua University), Sun Zijian (Tsinghua University)",
             },
           },
         ],
@@ -717,17 +735,17 @@ window.SITE_DATA = {
         label: { zh: "实习生", en: "Interns" },
         items: [
           {
-            year: "2019-2022",
-            names: {
-              zh: "岳魏琦（杭州电子科技大学）",
-              en: "Yue Weiqi (Hangzhou Dianzi University)",
-            },
-          },
-          {
             year: "2025",
             names: {
               zh: "许捷（电子科技大学）",
               en: "Xu Jie (University of Electronic Science and Technology of China)",
+            },
+          },
+          {
+            year: "2019-2022",
+            names: {
+              zh: "岳魏琦（杭州电子科技大学）",
+              en: "Yue Weiqi (Hangzhou Dianzi University)",
             },
           },
         ],
