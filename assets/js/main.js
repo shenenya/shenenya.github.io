@@ -31,6 +31,8 @@
       "contact.phone": "电话",
       "contact.address": "地址",
       "footer.link": "清华大学软件学院",
+      "stats.views": "浏览量",
+      "stats.visitors": "访客",
     },
     en: {
       brand: "Enya Shen",
@@ -62,6 +64,8 @@
       "contact.phone": "Phone",
       "contact.address": "Address",
       "footer.link": "School of Software, Tsinghua University",
+      "stats.views": "Views",
+      "stats.visitors": "Visitors",
     },
   };
 

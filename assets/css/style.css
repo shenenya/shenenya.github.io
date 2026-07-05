@@ -313,6 +313,10 @@ footer {
   display: flex; justify-content: center; gap: 0.5rem; flex-wrap: wrap;
 }
 .footer-inner .sep { color: var(--subtle); }
+.site-stats {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-variant-numeric: tabular-nums;
+}
 
 /* ===== Responsive ===== */
 @media (max-width: 680px) {
