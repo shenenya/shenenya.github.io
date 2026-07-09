@@ -46,10 +46,10 @@ window.SITE_DATA = {
 
   experience: {
     work: {
-      zh: [{ period: "2015.03 – 至今", text: "清华大学 软件学院" }],
+      zh: [{ period: "2017.04 – 至今", text: "清华大学 软件学院" }],
       en: [
         {
-          period: "2015.03 – Present",
+          period: "2017.04 – Present",
           text: "School of Software, Tsinghua University",
         },
       ],
