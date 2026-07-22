@@ -42,6 +42,18 @@ def pick(value, lang):
     return value or ""
 
 
+def flatten_service(service, lang):
+    entries = []
+    for item in pick(service, lang):
+        if isinstance(item, str):
+            entries.append(item)
+            continue
+        label = item.get("label", "")
+        for subitem in item.get("items", []):
+            entries.append(f"{label}: {subitem}" if label else subitem)
+    return entries
+
+
 def set_cell_shading(cell, fill):
     tc_pr = cell._tc.get_or_add_tcPr()
     shd = OxmlElement("w:shd")
@@ -392,7 +404,7 @@ def build_cv(lang, data):
     add_bullets(doc, mentoring)
 
     add_section(doc, "服务与荣誉" if zh else "Service and Honors")
-    service = pick(data["service"], lang)
+    service = flatten_service(data["service"], lang)
     honors = [pick(h, lang) for h in data["honors"]]
     add_bullets(doc, service + honors)
 

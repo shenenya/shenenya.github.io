@@ -261,7 +261,20 @@
 
   function renderService() {
     document.getElementById("service-list").innerHTML = pick(D.service)
-      .map((s) => `<li>${esc(s)}</li>`)
+      .map((category) => {
+        if (typeof category === "string") {
+          return `<li>${esc(category)}</li>`;
+        }
+
+        const items = category.items
+          .map((item) => `<li>${esc(item)}</li>`)
+          .join("");
+        return `
+        <li class="service-category">
+          <h3 class="service-category-title">${esc(category.label)}</h3>
+          <ul>${items}</ul>
+        </li>`;
+      })
       .join("");
   }
 

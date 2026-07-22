@@ -237,6 +237,22 @@ section:first-of-type { margin-top: 0; }
   font-size: 0.95rem;
 }
 .plain li:first-child { border-top: 0; }
+.plain li.service-category {
+  padding: 0.7rem 0;
+}
+.service-category-title {
+  margin: 0 0 0.35rem;
+  color: var(--accent);
+}
+.service-category ul {
+  list-style: disc;
+  padding-left: 1.2rem;
+  margin: 0;
+}
+.plain .service-category li {
+  padding: 0.15rem 0;
+  border-top: 0;
+}
 
 .proj-list { list-style: none; padding: 0; margin: 0; }
 .proj-list li {

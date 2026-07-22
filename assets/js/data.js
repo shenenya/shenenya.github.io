@@ -164,6 +164,24 @@ window.SITE_DATA = {
 
   publications: [
     {
+          authors: "Anchang Bao, <b>Enya Shen*</b>, Jianmin Wang",
+          title:
+            "Point Containment Queries on Trimmed Surfaces via Winding Numbers and Periodicity Lifting",
+          venue: "SIGGRAPH ASIA 2026 (accepted, journal track)",
+          abstract: {
+            zh: "面向 CAD 建模、曲面网格化和实体几何处理中的裁剪曲面点包含查询，提出一种快速且数值稳定的绕数计算方法。方法用椭圆界替代昂贵的曲线细分，并将周期曲面上的裁剪曲线提升到泛覆盖空间，从而在噪声、开边界和周期拓扑下保持鲁棒性。",
+            en: "The paper presents a fast and numerically stable winding-number method for point containment queries on trimmed surfaces. It replaces costly curve subdivision with ellipse-based bounds for Bezier segments and handles periodic surfaces through universal-cover lifting, improving robustness and speed for real B-Rep processing.",
+          },
+          links: [
+            {
+              label: "PDF",
+              href: "pdf/Point Containment Queries on Trimmed Surfaces via Winding Numbers and Periodicity Lifting.pdf",
+            },
+            { label: "arXiv", href: "https://arxiv.org/abs/2510.25159" },
+          ],
+          teaser: "assets/img/teasers/pcq.png",
+        },
+    {
           authors: "Sili Liang, Anchang Bao, <b>Enya Shen*</b>, Jianmin Wang",
           title: "A Survey of Boolean operations in 3D geometric modeling",
           venue: "Computer-Aided Design 197, 2026: 104081",
@@ -250,23 +268,6 @@ window.SITE_DATA = {
             { label: "DOI", href: "https://doi.org/10.3724/SP.J.1089.2024-00367" },
           ],
           teaser: "assets/img/teasers/brep-boolean.png",
-        },
-    {
-          authors: "Anchang Bao, <b>Enya Shen*</b>, Jianmin Wang",
-          title: "Fast and Robust Point Containment Queries on Trimmed Surface",
-          venue: "arXiv:2510.25159 [cs.GR], 2025",
-          abstract: {
-            zh: "面向 CAD 建模、曲面网格化和实体几何处理中的裁剪曲面点包含查询，提出一种快速且数值稳定的绕数计算方法。方法用椭圆界替代昂贵的曲线细分，并将周期曲面上的裁剪曲线提升到泛覆盖空间，从而在噪声、开边界和周期拓扑下保持鲁棒性。",
-            en: "The paper presents a fast and numerically stable winding-number method for point containment queries on trimmed surfaces. It replaces costly curve subdivision with ellipse-based bounds for Bezier segments and handles periodic surfaces through universal-cover lifting, improving robustness and speed for real B-Rep processing.",
-          },
-          links: [
-            {
-              label: "PDF",
-              href: "pdf/Fast and Robust Point Containment Queries on Trimmed Surface.pdf",
-            },
-            { label: "arXiv", href: "https://arxiv.org/abs/2510.25159" },
-          ],
-          teaser: "assets/img/teasers/point-containment.png",
         },
     {
           authors: "Anchang Bao, Jie Xu, <b>Enya Shen*</b>, Jianmin Wang",
@@ -782,14 +783,46 @@ window.SITE_DATA = {
 
   service: {
     zh: [
-      "清华大学软件学院 2022 级本科生班主任",
-      "CCF 计算机辅助设计与图形学专委会 委员",
-      "未央书院 2024–2025 学年导师（大一、大二年级）",
+      {
+        label: "审稿",
+        items: [
+          "会议：NIPS 2026、AAAI 2027",
+          "期刊：Computer-Aided Design、Computers & Graphics",
+        ],
+      },
+      {
+        label: "学生",
+        items: [
+          "软件学院 2022 级本科生班主任",
+          "水木书院 2026 级本科生班主任",
+          "未央书院 2024–2026 学年导师",
+        ],
+      },
+      {
+        label: "组织",
+        items: ["CCF 计算机辅助设计与图形学专委会 委员"],
+      },
     ],
     en: [
-      "Class advisor, 2022 undergraduates, School of Software, Tsinghua University",
-      "Member, CCF Technical Committee on CAD & Computer Graphics",
-      "Mentor (Freshman & Sophomore), Weiyang College, 2024–2025",
+      {
+        label: "Reviewing",
+        items: [
+          "Conferences: NIPS 2026, AAAI 2027",
+          "Journals: Computer-Aided Design, Computers & Graphics",
+        ],
+      },
+      {
+        label: "Students",
+        items: [
+          "Class advisor, 2022 undergraduates, School of Software",
+          "Class advisor, 2026 undergraduates, Shumuk College",
+          "Mentor, Weiyang College, 2024–2026 academic years",
+        ],
+      },
+      {
+        label: "Organization",
+        items: ["Member, CCF Technical Committee on CAD & Computer Graphics"],
+      },
     ],
   },
 
