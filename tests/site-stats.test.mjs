@@ -26,6 +26,13 @@ test("work experience starts from April 2017 in both languages", () => {
   assert.doesNotMatch(data, /period: "2015\.03 – (至今|Present)"/);
 });
 
+test("2026 engineers are listed first with pinyin names in English", () => {
+  assert.match(
+    data,
+    /engineer: \{[\s\S]*?items: \[\s*\{\s*year: "2026",\s*names: \{ zh: "肖明坤、曹君泽", en: "Xiao Mingkun, Cao Junze" \}/,
+  );
+});
+
 test("service entries are grouped into reviewing, student, and organization categories", () => {
   assert.match(data, /label: "审稿"/);
   assert.match(data, /label: "学生"/);

@@ -649,6 +649,10 @@ window.SITE_DATA = {
         label: { zh: "工程师", en: "Engineers" },
         items: [
           {
+            year: "2026",
+            names: { zh: "肖明坤、曹君泽", en: "Xiao Mingkun, Cao Junze" },
+          },
+          {
             year: "2025",
             names: {
               zh: "郝自理、刘潇迪、刘宝星、柳佳淑",
