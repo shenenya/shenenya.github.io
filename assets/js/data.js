@@ -11,8 +11,8 @@ window.SITE_DATA = {
     email: "shenenya@tsinghua.edu.cn",
     avatar: "assets/avatar.jpg",
     areas: {
-      zh: ["几何建模", "计算机图形学", "3D AIGC"],
-      en: ["Geometric Modeling", "Computer Graphics", "3D AIGC"],
+      zh: ["几何建模", "计算机图形学", "3D AIGC", "AI编程"],
+      en: ["Geometric Modeling", "Computer Graphics", "3D AIGC", "AI Programming"],
     },
     bio: {
       zh: "沈恩亚，清华大学软件学院副研究员。2014 年于国防科技大学计算机学院获博士学位，师从李思昆教授；2010 年获国防科技大学硕士学位；2008 年获南京航空航天大学学士学位。2017 至 2021 年在清华大学软件学院从事博士后研究，合作导师为王建民教授。现领导 <b>几何建模引擎研究组（GME Group）</b>，长期致力于三维几何建模引擎核心算法与关键技术研究。",
@@ -104,6 +104,14 @@ window.SITE_DATA = {
         desc: {
           zh: "基于扩散模型的三维几何生成、Image-to-BRep、神经隐式表示。",
           en: "Diffusion-based 3D geometry generation, Image-to-BRep, and neural implicit representations.",
+        },
+      },
+      {
+        key: "ai-programming",
+        title: { zh: "AI编程", en: "AI Programming" },
+        desc: {
+          zh: "面向工业软件的驾驭工程、智能体工程",
+          en: "Industry Software oriented Harness Engineering, Agentic Engineering",
         },
       },
     ],

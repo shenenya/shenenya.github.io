@@ -33,6 +33,17 @@ test("2026 engineers are listed first with pinyin names in English", () => {
   );
 });
 
+test("AI programming is included in profile areas and research cards", () => {
+  assert.match(data, /zh: \["几何建模", "计算机图形学", "3D AIGC", "AI编程"\]/);
+  assert.match(data, /en: \["Geometric Modeling", "Computer Graphics", "3D AIGC", "AI Programming"\]/);
+  assert.match(data, /title: \{ zh: "AI编程", en: "AI Programming" \}/);
+  assert.match(data, /zh: "面向工业软件的驾驭工程、智能体工程"/);
+  assert.match(
+    data,
+    /Industry Software oriented Harness Engineering, Agentic Engineering/,
+  );
+});
+
 test("service entries are grouped into reviewing, student, and organization categories", () => {
   assert.match(data, /label: "审稿"/);
   assert.match(data, /label: "学生"/);
