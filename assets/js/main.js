@@ -156,17 +156,10 @@
   }
 
   function renderResearch() {
-    const grid = document.getElementById("research-grid");
-    grid.innerHTML = D.research.areas
-      .map(
-        (a) => `
-      <div class="research-card">
-        <h3>${esc(pick(a.title))}</h3>
-        <p>${esc(pick(a.desc))}</p>
-      </div>
-    `,
-      )
-      .join("");
+    document.getElementById("research-framework-image").alt = pick({
+      zh: "个人研究框架：几何建模、计算机图形学、3D AIGC 和 AI 编程支撑三维几何建模引擎 GME 与工业软件应用（点击查看原图）",
+      en: "Research framework (in Chinese): geometric modeling, computer graphics, 3D AIGC and AI programming supporting the GME engine and industrial software applications. Click to view the full-size image.",
+    });
   }
 
   function renderPublications() {
